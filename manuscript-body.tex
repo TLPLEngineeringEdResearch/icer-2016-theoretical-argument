@@ -132,10 +132,8 @@ samples, although such information was neither given nor implied''
 \cite{kaczmarczyk_identifying_2010}.
 
 Again, the researchers are right that the student is failing to describe
-the code in a way consistent with canon.\footnote{In this case, canon is
-  the specifications and operations of the Java language and its
-  compilers.} But, in their non-canonical thinking Student3 evidences
-potentially productive insights about design. Precisely \emph{because}
+the code in a way consistent with canon. But, in their non-canonical thinking Student3 evidences
+potentially ``\emph{productive}'' \cite{hammer_form_2002,hammer_tapping_2003} insights about design. Precisely \emph{because}
 there is no code stating that \textbf{turkey} and \textbf{roastBeef} and
 ham are sorted into the array, the student is \emph{inferring} that to
 be true. And, while that behavior is not what's happening, it
@@ -145,12 +143,10 @@ into an array of type \textbf{Meat}. To do so, a designer could define
 \textbf{Turkey} and \textbf{Ham} and \textbf{RoastBeef} as inheriting
 from \textbf{Meat}.
 
-Student3 has an idea about a relationship between entities where that
-relationship is not specified in the code. Kaczmarczyk et al.
-(Kaczmarczyk et al., 2010) focus only on the downside of the idea: the
+Put another way, it's true Student3 has an idea about a relationship between entities that
+is not specified in the code. The study authors focus only on the \emph{downside} of the idea: the
 student fails to display a proper understanding of how arrays work in
-Java. Moreover, the student might be prone to similar mistakes of
-inferring information that does not actually exist in code. But, there
+Java. But, there
 is also an upside of this idea. Because Student3 is thinking about
 real-world propositions like turkey and ham being kinds of meat, they
 might be prepared to appreciate and discuss an object-oriented way to
@@ -160,81 +156,79 @@ be tipped into a productive object-oriented design activity around the
 meats example because that question was not a focus of the research.
 
 My second example of research that criticizes students' non-canonical
-understandings comes from Bonar and Soloway's (1983) study of Pascal
-programmers, part of which is discussed in Pea (1986). A student in
-Bonar \& Soloway's study was asked to ``Write a program which reads in
+understandings comes from Bonar and Soloway's 1983 study of Pascal
+programmers \cite{bonar_uncovering_1983}, data from which is also analyzed and discussed in \cite{pea_languageindependent_1986}. A student in
+\cite{bonar_uncovering_1983} was asked to ``Write a program which reads in
 ten integers and prints the average of those integers'' (Bonar \&
 Soloway, 1983, p. 12). In pseudo-code, she wrote:
 
+\begin{verbatim}
 Repeat
-
 (1) Read a number (Num)
-
-(1a) Count := Count + 1
-
+    (1a) Count := Count + 1
 (2) Add the number to Sum
-
-(2a) Sum := Sum + Num
-
+    (2a) Sum := Sum + Num
 (3) until Count :=10
-
 (4) Average := Sum div Num
-
-(5) writeln (`average = `,Average)
+(5) writeln ('average = ',Average)
+\end{verbatim}
 
 The interviewer then asked whether (1a) and (2a) were ``the same kinds
 of statements.'' That interchange is reproduced here:
 
-Interviewer: Steps 1a and 2a: are those the same kinds of statements?
+\begin{quote}
+  Interviewer: Steps 1a and 2a: are those the same kinds of statements?
 
-Subject: How's that, are they the same \emph{kind}. Ahhh, ummm, not
-exactly, because with this {[}1a{]} you are adding - you initialize it
-at zero and you're adding one to it {[}points to the right side of 1a{]}
-which is just a constant kind of thing.
+  Subject: How's that, are they the same \emph{kind}. Ahhh, ummm, not
+  exactly, because with this {[}1a{]} you are adding - you initialize it
+  at zero and you're adding one to it {[}points to the right side of 1a{]}
+  which is just a constant kind of thing.
 
-Interviewer: Yes
+  Interviewer: Yes
 
-Subject: {[}points to 2a{]} Sum, initialized, to, uhh Sum to Sum plus
-Num, ahh - thats {[}points to left side of 2a{]} storing two values in
-one, two variables {[}points to Sum and Num on the right side of 2a{]}.
-That's {[}now points to 1a{]} a counter, that's what keeps the whole
-loop under control. Whereas, this thing {[}points to 2a{]} was probably
-the most interesting thing\ldots{}about Pascal when I hit it. That you
-could have the same, you sorta have the same thing here {[}points to
-1a{]}, it was interesting that you cold have, you could save space by
-having the Sum re-storing information on the left with two different
-things there {[}points to right side of 2a{]}, so I didn't need to have
-two. No, they're different to me.
+  Subject: {[}points to 2a{]} Sum, initialized, to, uhh Sum to Sum plus
+  Num, ahh - thats {[}points to left side of 2a{]} storing two values in
+  one, two variables {[}points to Sum and Num on the right side of 2a{]}.
+  That's {[}now points to 1a{]} a counter, that's what keeps the whole
+  loop under control. Whereas, this thing {[}points to 2a{]} was probably
+  the most interesting thing\ldots{}about Pascal when I hit it. That you
+  could have the same, you sorta have the same thing here {[}points to
+  1a{]}, it was interesting that you cold have, you could save space by
+  having the Sum re-storing information on the left with two different
+  things there {[}points to right side of 2a{]}, so I didn't need to have
+  two. No, they're different to me.
 
-Interviewer: So - in summary, how do you think of 1a?
+  Interviewer: So - in summary, how do you think of 1a?
 
-Subject: I think of this {[}point to 1a{]} as just a constant, something
-that keeps the loop under control. And this {[}points to 2a{]} has
-something to do with something that you are gonna, that stores more
-kinds of information that you are going to take out of the loop with
-you. (Bonar \& Soloway, 1983, p. 12)
+  Subject: I think of this {[}point to 1a{]} as just a constant, something
+  that keeps the loop under control. And this {[}points to 2a{]} has
+  something to do with something that you are gonna, that stores more
+  kinds of information that you are going to take out of the loop with
+  you. \cite{bonar_uncovering_1983}
+\end{quote}
 
-Pea's (1986) interpretation? ``Here, again, we see the student believing
+
+Pea and Kurland's interpretation? ``Here, again, we see the student believing
 that the programming language knows more about her intentions than it
-possibly can'' (p. 32).
+possibly can'' \cite{pea_cognitive_1983}.
 
-As before, this student has an idea about relationships in code. Pea
-(1986) see the downside of her idea: believing PASCAL can understand
+As in Example 1, this student has an idea about relationships in code. Pea and Kurland
+\cite{pea_cognitive_1983} see the \emph{downside} of her idea: believing PASCAL can understand
 shades of programmer intent when, in fact, it cannot. And again, that
 downside is real. It could cause trouble for this programmer later on if
 she expects PASCAL to interpret her intent and it cannot.
 
 In defense of the student, the question --- as asked --- is vague. Are
-those statements the same \emph{to whom and in what way?} Pea (1986)
-treats the data as though she meant ``the same to PASCAL.'' Indeed,
+those statements the same \emph{to whom} and \emph{in what way?} Pea and Kurland
+treat the data as though she meant ``the same to PASCAL.'' Indeed,
 maybe she did, in which case his interpretation has traction. But,
-another interpretation is that she meant to herself, or to someone else
+another interpretation is that she meant to herself or to someone else
 reading the code. Those statements might not be the same \emph{to her}
 because she treats (1a) as having a function of controlling iteration
 while (2a)'s job is to combine two numbers into a new sum.
 
 These two purposes, which for the sake of description I'll call
-\emph{keeping control} and \emph{totaling up} are, in a sense,
+\emph{keeping control} (1a) and \emph{totaling up} (2a) are, in a sense,
 different. The PASCAL compiler (and runtime) does not differentiate
 them, but humans can. And, humans may well \emph{want} to differentiate
 them. diSessa (1986) describes exactly this kind of differentiation as a
@@ -243,17 +237,19 @@ language from a functional understanding of a language. As an example,
 he discusses the structure/function difference with respect to
 variables:
 
-The structural aspects of a variable in a computer language are given
-primarily by the rules for setting their values and for getting access
-to their values. These rules apply in all contexts. In contrast, a
-variable's functions might vary. Sometimes they might be described as
-``a flag'' or more generally, as ``a communications device.'' At other
-times a variable might function as ``a counter,'' ``data,'' or
-``input.'' (diSessa, 1986, p. 202)
+\begin{quote}
+  The structural aspects of a variable in a computer language are given
+  primarily by the rules for setting their values and for getting access
+  to their values. These rules apply in all contexts. In contrast, a
+  variable's functions might vary. Sometimes they might be described as
+  ``a flag'' or more generally, as ``a communications device.'' At other
+  times a variable might function as ``a counter,'' ``data,'' or
+  ``input.'' \cite{disessa_models_1986}
+\end{quote}
 
-The student in Bonar \& Soloway's (1983) study did not show evidence of
+The student in \cite{bonar_uncovering_1983} did not show evidence of
 understanding the structural similarities between (1a) and (2a) in her
-pseudo-code. And, those authors as well as Pea (1986) justly insist that
+pseudo-code. And, those authors as well as others \cite{pea_cognitive_1983} justly insist that
 similarity is important for students to understand. From a conceptual
 standpoint, seeing the structural similarity constitutes a part of
 ``knowing'' PASCAL. But, even if knowing PASCAL were not the goal,
@@ -262,34 +258,36 @@ agent that has no means for discerning programmer intent. Such
 perspective-taking may help students avoid mistakes that arise from
 over-assuming what a computer ``understands.''
 
-The student did show evidence of understanding a functional difference
-between (1a) and (2a), but Pea (1986) does not remark on that kind of
-understanding at all.\footnote{Also glossed over is, to me, another
-  important difference: a programmer might not know in advance which
-  numbers are being passed in to the sum statement. So, in advance the
-  programmer can say nothing about how the value of \textbf{Sum} will
-  change as the loop iterates. In contrast, the programmer knows exactly
-  how the value of Count will change with each loop iteration.} Again, I
+The student did, however, show evidence of understanding a \emph{functional} \cite{disessa_models_1986} difference
+between (1a) and (2a), but Pea and Kurland do not remark on that kind of
+understanding at all. Both \cite{pea_cognitive_1983,bonar_uncovering_1983} also gloss over another
+important difference: a programmer might not know in advance which
+numbers are being passed in to the sum statement. So, in advance the
+programmer can say nothing about how the value of \textbf{Sum} will
+change as the loop iterates. In contrast, the programmer knows exactly
+how the value of Count will change with each loop iteration. Again, we
 claim this oversight is part of a subtle but observable trend in
-programming misconceptions literature. While, or perhaps because
+programming misconceptions literature.
+
+While, or perhaps because
 research has been so preoccupied warring with students' problematic
 knowledge, it has sometimes failed to recover the productive knowledge
-(or resources for building it) students have. In this example, the
+(or resources for building it) students have. In Example 2, the
 student already has a grasp that syntactically similar statements could
-serve different conceptual purposes. Hypothetically, the student might
-use that information in design by calling up the $\Box=︎ \Box + 1$ syntactical
-template when the situation seems to demand \emph{keeping control},
-while calling up $\Box= ︎\Box + \mathrm{number}$ when \emph{totaling up} is the goal.
-And, the idea that structurally identical symbol templates can serve
-different functional and conceptual purposes fits precisely in line with
-Sherin's (2001) theory of symbolic forms. For example, the symbolic
+serve different conceptual purposes. And, that understanding could, in turn, shape how they program. The student might
+invoke the $\Box=︎ \Box + 1$ syntactical
+template (Or what Sherin would call ``symbol template'' \cite{sherin_how_2001}) when the situation seems to demand \emph{keeping control},
+while invoking $\Box= ︎\Box + \mathrm{number}$ when \emph{totaling up} is the goal.
+And, the idea that structurally similar symbol templates can serve
+different functional and conceptual purposes fits precisely in line with both diSessa's distinction of structural/functional understanding of a programming language \cite{disessa_models_1986} and
+Sherin's theory of symbolic forms \cite{sherin_how_2001}.
+
+An example drives home the connection between \cite{disessa_models_1986} and \cite{sherin_how_2001} as it applies to programming. The symbolic
 forms \emph{parts-of-a-whole} and \emph{base+change} have different
 conceptual schemata. Parts-of-a-whole refers to the contributions of
-component entities while base±change describes a kind of accumulation.
-Specifically, the terms in base±change ``play different roles'' (Sherin,
-2001, p. 534) But, the two distinct conceptual schemata share what I
-would argue is the same concrete symbol template of how to write an
-expression: $\Box=︎ \Box + \Box$.
+component entities while base±change describes a kind of accumulation \cite{sherin_how_2001}.
+Specifically, the terms in base±change ``contribute to a whole but play different roles. One is a base value; the other is a change to that base.'' But, the two distinct conceptual schemata share what I
+would argue is the same symbolic structure: $\Box=︎ \Box + \Box$ (parts of a whole) and $\Box = \Box \pm \Delta$ (base + change) \cite{sherin_how_2001}.
 
 The problem, for learning to program, comes in needing to fluidly
 interpret and write code in languages that may demand incommensurable,
@@ -298,35 +296,32 @@ three current programming languages make remarkably different use of the
 plus sign (+) as an operator. Crucially, some of the entailing ways to
 make sense of how + works in those languages don't exist in Sherin's
 (2001) catalog of conceptual schemata. In other words, I would argue
-there are conceptual ways a programmer may need to think about
-interpreting or writing a $\Box=︎ \Box +\Box$ symbol template that Sherin doesn't
-enumerate.\footnote{One of the most obvious is the movement from seeing
-  $\Box=︎ \Box +\Box$ as a statement of equality to seeing it as the storage of a
-  sum to a variable.} To follow that implication, the canonical body of
+there are conceptual ways a \emph{programmer} may need to think about
+interpreting or writing a $\Box=︎ \Box +\Box$ symbol template that even Sherin \cite{sherin_how_2001} doesn't
+enumerate.One of the most obvious, for example, is the conceptual movement from seeing
+  $\Box=︎ \Box +\Box$ as a statement of equality (typical in a math class) to seeing it as the assignment of a
+  sum to a variable (typical in programming). To follow that implication, the canonical body of
 knowledge about which programmers must reason is itself fractured,
 because different languages design their operations around different
 symbolic and conceptual metaphors.
 
-To return to misconceptions, what drives research on students'
-misconceptions is largely a need to get students to program computers
+To return to misconceptions, what seems to drive research on students'
+misconceptions is computing education largely a need to get students to program computers
 and reason about computation in ways that are canonically correct. And,
-those are assuredly worthwhile goals. But, as I've argued, we can
+that's a worthwhile goals. But, as I've argued, we can
 already identify cases where a narrow misconceptions focus is silent
-about or dismissive of students' useful intuitions. We can also identify
-the further problems whereby unilateral emphasis on one language's canon
+about (at best) or dismissive of (at worst) students' useful intuitions. We identified
+the further problems when a unilateral emphasis on one language's canon
 opposes the vocabulary of symbolic forms (and diverse conceptual
-schemata) expert programmers ultimately need (Sherin, 2001) Taken in
+schemata) expert programmers ultimately need. \emph{Taken in
 total, that silence, dismissiveness, and narrow view of refining
 knowledge perpetuates a deficit-focused discourse about student's
-knowledge in computing.\footnote{Worse still, in my view, is that there
-  is a pattern of researchers failing to discuss or acknowledge
-  students' productive knowledge \emph{even when their own data supports
-  it}.} Such a perspective also fails to address what aspects of
+knowledge in computing.} A knowledge-deficiency perspective also fails to address what aspects of
 students reasoning might get broken by attempts to ``fix'' such
 ``misconceptions''.
 
 It's important to note that misconceptions research in computing didn't
-always treat students' non-canonical knowledge this way. I begin the
+always treat students' non-canonical knowledge as a problem. I begin the
 next section by backtracing to some of the earliest work on students'
 cognitive ``bugs''. There, we find researchers talking more explicitly
 about what's useful in students' non-canonical knowledge---a stance
