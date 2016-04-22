@@ -12,13 +12,11 @@ on students' misconceptions in programming. It's a focus with a sensible
 origin. Students get things wrong in programming --- often
 systematically so --- and in ways that seem resistant to instruction.
 The cause of those errors is theorized to be something cognitive,
-whether it's a ``bug'' \cite{pea_buggy_1987} (Pea et al., 1987; Pea, 1986; VanLehn, 1990) a
-``misconception'' (Bayman \& Mayer, 1983; Bonar \& Soloway, 1985;
-Clancy, 2004; Gal-Ezer \& Zur, 2004; Herman et al., 2008; Kaczmarczyk et
-al., 2010), a ``belief'' (Fleury, 1993) or a ``student-constructed
-rule'' (Fleury, 1991, 2000). Instruction should try to identify,
-address, and correct these misconceptions (Clancy, 2004) because they
-can represent barriers to learning.
+whether it's a ``bug'' \cite{pea_buggy_1987,pea_languageindependent_1986,vanlehn_mind_1990}, a
+``misconception'' \cite{bayman_diagnosis_1983,bonar_preprogramming_1985,clancy_misconceptions_2004,gal-ezer_efficiency_2004,herman_proof_2008,kaczmarczyk_identifying_2010}, a ``belief'' \cite{fleury_student_1993}, or a ``student-constructed
+rule'' \cite{fleury_parameter_1991,fleury_programming_2000} in programming. Instruction, Clancy argues, should try to identify,
+address, and correct these misconceptions because they
+can represent barriers to learning \cite{clancy_misconceptions_2004}.
 
 How that line of thinking and research becomes problematic is two-fold.
 First, when taken in total the alleged brokenness of student knowledge
@@ -283,9 +281,9 @@ knowledge, it has sometimes failed to recover the productive knowledge
 (or resources for building it) students have. In this example, the
 student already has a grasp that syntactically similar statements could
 serve different conceptual purposes. Hypothetically, the student might
-use that information in design by calling up the ``◻=︎ + 1'' syntactical
+use that information in design by calling up the $\Box=︎ \Box + 1$ syntactical
 template when the situation seems to demand \emph{keeping control},
-while calling up ``◻= ︎ + number'' when \emph{totaling up} is the goal.
+while calling up $\Box= ︎\Box + \mathrm{number}$ when \emph{totaling up} is the goal.
 And, the idea that structurally identical symbol templates can serve
 different functional and conceptual purposes fits precisely in line with
 Sherin's (2001) theory of symbolic forms. For example, the symbolic
@@ -295,7 +293,7 @@ component entities while base±change describes a kind of accumulation.
 Specifically, the terms in base±change ``play different roles'' (Sherin,
 2001, p. 534) But, the two distinct conceptual schemata share what I
 would argue is the same concrete symbol template of how to write an
-expression: ◻=︎ + ◻.
+expression: $\Box=︎ \Box + \Box$.
 
 The problem, for learning to program, comes in needing to fluidly
 interpret and write code in languages that may demand incommensurable,
@@ -305,9 +303,9 @@ plus sign (+) as an operator. Crucially, some of the entailing ways to
 make sense of how + works in those languages don't exist in Sherin's
 (2001) catalog of conceptual schemata. In other words, I would argue
 there are conceptual ways a programmer may need to think about
-interpreting or writing a ◻=︎ +◻ symbol template that Sherin doesn't
+interpreting or writing a $\Box=︎ \Box +\Box$ symbol template that Sherin doesn't
 enumerate.\footnote{One of the most obvious is the movement from seeing
-  ``◻=︎ +◻'' as a statement of equality to seeing it as the storage of a
+  $\Box=︎ \Box +\Box$ as a statement of equality to seeing it as the storage of a
   sum to a variable.} To follow that implication, the canonical body of
 knowledge about which programmers must reason is itself fractured,
 because different languages design their operations around different
@@ -470,52 +468,52 @@ same language
 \end{center}
 
 
-% I stress that the third column is about \emph{how I might think about}
-% each programming statement\emph{.} By no means am I making normative
-% claims about how one \emph{ought} to think about it, or whether the
-% statement actually does what its names might suggest it does. Rather,
-% ``How I might think about it'' reflects the kind of local meaning or
-% interpretation I might attach to such a statement when I work with it,
-% given my understanding of its role and context.
-%
-% Consider specifically statements 1 and 4. Statement 1 could very well be
-% an incrementer in some kind of iterative code. If I had to debug code
-% that employs statement 1, what I might do is exploit my knowledge of
-% what d is (does it hold a constant value? Is it 1?) and try inserting
-% intermediate print statements into the iterative code. Doing so, I can
-% inspect textually how values change with each iteration. In statement
-% 4's case, it could very well be that the position-update code animates
-% images on a screen. If there's a problem with that code, one of the
-% easiest ways I might notice is that the acceleration seems off in the
-% graphics. Consequently, my debugging might call upon knowledge I have
-% from kinematics. I might try inserting code that draws a dot at the
-% object's on-screen position with each iteration, leaving a trail I can
-% visually inspect. I could then look at the path of the object's
-% trajectory and the spacing patterns between successive dots as a
-% first-pass test of whether my code achieves the motion I want.
-%
-% To be clear, it's not just that graphics might improve my efficiency in
-% debugging a statement. Rather, applying an interpretive frame that
-% treats an assignment statement as a kinematic position update lets me
-% \emph{use conceptual knowledge from physics} to diagnose and fix
-% problems in my code. If I view the assignment statement as saying
-% something about the motion of an object (cf., Hammer, 1994, p. 165), a
-% field of knowledge and concomitant techniques from physics becomes
-% available to me to think with. But, if I focus only on the
-% semantic-level equivalence of statements 1 through 5, there would be no
-% obvious reason for me to access what I know about physics in order to
-% reason about the code.
-%
-% My second example concerns statements that are syntactically-similar,
-% rather than semantically-similar. I proposed that the statements in
-% Table 2 all came from the same language. But, another phenomenon comes
-% into play when different languages use the same symbology for
-% conceptually different operations. Table 3 shows examples of what look
-% like semantically-equivalent operations, but in fact are not.
-%
-% \protect\hypertarget{ux5fToc252445957}{}{}Table -- Three
-% syntactically-similar statements with very different semantics
-%
+I stress that the third column is about \emph{how I might think about}
+each programming statement\emph{.} By no means am I making normative
+claims about how one \emph{ought} to think about it, or whether the
+statement actually does what its names might suggest it does. Rather,
+``How I might think about it'' reflects the kind of local meaning or
+interpretation I might attach to such a statement when I work with it,
+given my understanding of its role and context.
+
+Consider specifically statements 1 and 4. Statement 1 could very well be
+an incrementer in some kind of iterative code. If I had to debug code
+that employs statement 1, what I might do is exploit my knowledge of
+what d is (does it hold a constant value? Is it 1?) and try inserting
+intermediate print statements into the iterative code. Doing so, I can
+inspect textually how values change with each iteration. In statement
+4's case, it could very well be that the position-update code animates
+images on a screen. If there's a problem with that code, one of the
+easiest ways I might notice is that the acceleration seems off in the
+graphics. Consequently, my debugging might call upon knowledge I have
+from kinematics. I might try inserting code that draws a dot at the
+object's on-screen position with each iteration, leaving a trail I can
+visually inspect. I could then look at the path of the object's
+trajectory and the spacing patterns between successive dots as a
+first-pass test of whether my code achieves the motion I want.
+
+To be clear, it's not just that graphics might improve my efficiency in
+debugging a statement. Rather, applying an interpretive frame that
+treats an assignment statement as a kinematic position update lets me
+\emph{use conceptual knowledge from physics} to diagnose and fix
+problems in my code. If I view the assignment statement as saying
+something about the motion of an object (cf., Hammer, 1994, p. 165), a
+field of knowledge and concomitant techniques from physics becomes
+available to me to think with. But, if I focus only on the
+semantic-level equivalence of statements 1 through 5, there would be no
+obvious reason for me to access what I know about physics in order to
+reason about the code.
+
+My second example concerns statements that are syntactically-similar,
+rather than semantically-similar. I proposed that the statements in
+Table 2 all came from the same language. But, another phenomenon comes
+into play when different languages use the same symbology for
+conceptually different operations. Table 3 shows examples of what look
+like semantically-equivalent operations, but in fact are not.
+
+\protect\hypertarget{ux5fToc252445957}{}{}Table -- Three
+syntactically-similar statements with very different semantics
+
 % \begin{supertabular}[]{@{}llll@{}}
 % \toprule
 % \textbf{Statement } & Programming Syntax & Language & How I think about
@@ -529,272 +527,234 @@ same language
 % layer of points onto a plot p\tabularnewline
 % \bottomrule
 % \end{supertabular}
-%
-% The catch here is that the plus operator takes on different roles in
-% different languages because of how those languages define its use.
-% Statement 1 increments a number in C; Statement 2 appends the letters
-% ``ly'' to a string; Statement 3 adds a layer of points to a statistical
-% graphics plot. These different kinds of operations become even more
-% apparent and consequential when, for example, such statements are
-% repeated. In the R/ggplot2 code below,\footnote{In R, the assignment
-%   operator can be written as a directional arrow. The symbol
-%   \textless{}- (``less-than, hyphen'') indicates the value on the right
-%   side of the symbol is being assigned to the variable on the left side
-%   of the symbol. As used, the symbol itself is semantically equivalent
-%   to having written an equals sign (``=``).} I'm using multiple
-% reassignment statements to compose a statistical graphics plot. The
-% layered creation of a plot invites a very different kind of conceptual
-% interpretation than, say, repeatedly accumulating numbers into a running
-% sum:
-%
-% p \textless{}- InitializeGgplot\_1w()
-%
-% p \textless{}- p + GrandMeanLine(owp)
-%
-% p \textless{}- p + GrandMeanPoint(owp)
-%
-% p \textless{}- p + ScaleX\_1w(owp)
-%
-% p \textless{}- p + ScaleY\_1w(owp)
-%
-% p \textless{}- p + JitteredScoresByGroupContrast(owp, jj)
-%
-% One obvious reason for thinking about this code with a different
-% interpretive frame is that numeric addition is commutative; composing a
-% plot is not necessarily commutative.\footnote{To convince yourself that
-%   plot composition isn't commutative, imagine a scale function that
-%   squares up the aspect ratio of a plot and another scale function that
-%   sets the aspect ratio to 1.5:1. Applying the square function last
-%   produces a square plot; applying it first produces a rectangular plot.
-%   String concatenation is also not necessarily commutative. ``cat'' +
-%   ``dog'' evaluates to ``catdog,'' while ``dog'' + ``cat'' evaluates to
-%   ``dogcat.''} So, despite the syntactic similarity, reassignments that
-% compose a plot using reassignment (as above) does not obey the same
-% rules as reassignments for a running total. But, even within this code
-% block, statements that look alike perform operations of a different
-% nature. While some expressions (e.g, ``+ GrandMeanLine(owp)'') add a
-% visual layer to a plot, others modify features of the plot (e.g, ``+
-% Scale\_X(owp)'', which adjusts the scales on the plot's x-axis to fit
-% the numeric range of the data).
-%
-% Given these motivating examples, it seems sensible to think there's
-% utility in a programmer having different conceptual metaphors available
-% to think about and work with code. Example 1 shows that choosing to
-% apply knowledge from physics to a piece of code can change the cognitive
-% nature of debugging. There, debugging a position-update statement
-% becomes, in part, reasoning kinematically about the properties of motion
-% trails.\footnote{For comparison, consider the argument that ringing an
-%   aircraft speedometer with physical markers changes the nature of
-%   cognition when pilots work to land a plane (Hutchins, 1995b).} Example
-% 2 shows that across languages, programmers might have to deploy
-% different conceptual metaphors to reason about statements in a
-% locally-consistent way. Knowing that plots in ggplot2 can be composed
-% layer-by-layer with reassignment is crucial if you're trying to write or
-% understand code that creates statistical graphics. But, I would argue
-% that thinking about ◻ = ◻ + ◻ as ``compose new layer onto plot'' can and
-% does appeal to different kinds of knowledge when compared to thinking
-% about ◻ = ◻ + ◻ as ``include this addend in the sum,'' which itself can
-% and does appeal to different kinds of concepts when compared to thinking
-% about ◻ = ◻ + ◻ as ``increment the counter.''
-%
-% Stepping back, I can build the following argument
-%
-% \begin{enumerate}
-% \def\labelenumi{\arabic{enumi}.}
-% \item
-%   Programming can be helped by applying conceptual models to code,
-%   particularly when relevant domain-knowledge structures can
-%   advantageously transform a problem (example 1)
-% \item
-%   But, conceptual models don't work all the time for all statements.
-%   Because languages are designed differently, the same syntax can
-%   actually correspond to very different operations in code (example 2).
-%   And, that's true both within and across languages.
-% \item
-%   Consequently, it makes less sense to treat conceptual models as right
-%   or wrong, and more sense to treat them as differentially advantageous
-%   for thinking about what a piece of code does. (Thinking a ``+''
-%   implies numerical addition isn't \emph{globally wrong} in JavaScript,
-%   but it won't explain why 1 + ``1'' yields ``11'' as a result.)
-% \item
-%   It seems plausible that successful programmers, when reasoning about
-%   or writing code, are able to dynamically access or deploy conceptual
-%   models that are advantageous given the context (language, syntax,
-%   surrounding code). Certainly such a supposition is in line with work
-%   suggesting students have resources for thinking conceptually and
-%   dynamically about how mathematics models real-world situations (Izsák,
-%   2004; Sherin, 2001)
-% \item
-%   To model how programmers think with conceptual models, a suitable
-%   framework should be able to account for the dynamic, context-sensitive
-%   deployment of conceptual knowledge.
-% \item
-%   To model how programmers develop expertise, a suitable framework
-%   should be able to describe higher-order phenomena. Such phenomena
-%   include explaining how programmers come to have conceptual models or
-%   generate new ones, why they decide to deploy them, and how programmers
-%   consider which conceptual model (i.e., which way to think about code)
-%   is appropriate.
-% \end{enumerate}
-%
-% Taken together, these assertions propose criteria for how we might
-% strive to model cognition in programming. Our modeling frameworks should
-% be context-dependent, dynamic, and capable of explaining where
-% conceptual models come from. They should also be able to account for
-% phenomena that are not themselves conceptual, including what directs the
-% use of certain kinds of conceptual knowledge. In the learning sciences,
-% such models already exist and have proven useful and productive for
-% thinking about thinking.
-%
-% \subsection{Manifold models of cognition explain context-dependence
-% and the growth of
-% expertise}\label{manifold-models-of-cognition-explain-context-dependence-and-the-growth-of-expertise}
-%
-% In 1993, a pair of articles in the learning sciences staked a strong
-% claim for viewing knowledge as a network of pieces, isolated enough to
-% be locally triggered but trainable enough to fire in larger concerted
-% patterns (diSessa, 1993; Smith, diSessa, \& Roschelle, 1993). Informed
-% in part by agent-based accounts of cognition (Minsky, 1986) and complex
-% systems models (diSessa, 2002), the central tenets of an ``in-pieces''
-% approach hold that knowledge is emergent from interacting primitives,
-% rather than unitary and monolithic. An example from Smith, diSessa, and
-% Roschelle helps illustrate the point.
-%
-% The authors show that we might think of a rubber band as a different
-% conceptual entity depending on context. In several different
-% situations---wrapped around a newspaper, pulled taut as a string, spun
-% to store energy in a toy plane propeller---we intuitively think about
-% the rubber band's physical behavior differently: one as a negligible
-% part of the newspaper's point mass, another as a transverse pendulum
-% (likely) obeying Hooke's Law, and the third as a torsional spring. Those
-% differences in intuitive thinking reflect the contextual dependency of
-% what we know about the physical world:
-%
-% In each of the rubberband examples, various pieces of intuitive physical
-% knowledge describe the mechanism at work: the rubber band binds the
-% newspaper, grips the jar lid, and acts a source of springiness for the
-% bobbing object. Although a mapping cannot be made from the rubberband to
-% scientific entities, it is quite easy to map these qualitatively
-% distinct physical processes to scientific entities and laws. For
-% example, instances of binding almost always map to a practically rigid
-% body. Likewise, gripping maps to friction forces, and springiness maps
-% to Hooke's law. This suggests that applicability can depend directly on
-% our intuitive knowledge---knowledge that exists prior to any formal
-% scientific training (Smith et al., 1993, p. 144).
-%
-% The in-pieces approach to modeling cognition has been used, among other
-% things, to explain how experts reason about fractions and decimals
-% (Smith et al., 1993), how students reason about forces in physics
-% (diSessa \& Sherin, 1998; diSessa, 1993; Hammer, 1996; Sherin, 2001),
-% how students construct and evaluate algebraic representations of
-% physical situations (Izsák, 2004), and how knowledge transfers across
-% contexts (Hammer et al., 2005; Wagner, 2006). Because its starting
-% assumption is that knowledge is fragmented, knowledge-in-pieces can
-% account for wide variations of how people---particularly novices---use
-% knowledge on a moment-to-moment basis. In other words, because it
-% assumes knowledge is local, it can still explain the kinds of
-% globally-inconsistent ways people might reason about physical situations
-% (diSessa, 1993). As a framework, an in-pieces approach ultimately argues
-% that models of concept replacement and good/bad criteria for knowledge
-% should be supplanted by a learning model of alignment/refinement of
-% prior knowledge and the consideration of knowledge as
-% productive/unproductive.
-%
-% Hammer and colleagues have worked to extend the in-pieces approach to
-% explain how students' epistemological activity---how they orient toward
-% knowledge and knowing in a context (Hammer et al., 2005; Hammer \& Elby,
-% 2002, 2003). Specifically, those authors use two core theoretical
-% constructs to explain students' stances toward knowledge and knowing:
-%
-% \begin{itemize}
-% \item
-%   \emph{Epistemological Resources} are the epistemological equivalent of
-%   diSessa's phenomenological primitives (p-prims). Resources, the
-%   authors propose, are the atomic units involved in how people cognize
-%   about the source of knowledge, the nature of knowledge, and
-%   epistemological activities (Hammer \& Elby, 2003; Louca, Elby, Hammer,
-%   \& Kagey, 2004).
-% \item
-%   \emph{Epistemological Frames} are the emergent result of subsets of
-%   resources acting in concert. Drawing from both Goffman's (1974)
-%   sociological notion of frame as structures of expectations and
-%   subsequent work on framing in discourse (Tannen, 1993),
-%   epistemological frames are a participant's local answer to the
-%   question ``what is it {[}specifically, what knowledge activity{]}
-%   that's going on here'' (Goffman, 1974, p. 8).
-% \end{itemize}
-%
-% Resources can frames can interact in activity settings to produce
-% larger-scale patterns called ``epistemological coherences'' (Rosenberg,
-% Hammer, \& Phelan, 2006) where evidence from data suggests that a
-% network of discrete cognitive units can nonetheless give rise to stable
-% cognition.
-%
-% A useful conceptual metaphor for resources and framing is to think about
-% a lecture hall with different sets of lights: a spotlight in the back to
-% highlight a lecturer, chalkboard lights, house lights, and a projector.
-% Each light has an individual brightness, but the lights are only
-% controllable at the per-bulb level. In that sense, they are atomic. But,
-% light patterns interact with one another to create a field of lighting
-% for the room. Thus, lights are a bit like resources, and different light
-% configurations can correspond to different, sociologically-stable uses
-% of the room.
-%
-% \protect\hypertarget{ux5fToc252445958}{}{}Table -- Using room lighting
-% configurations to think about epistemological framing
-%
-% \begin{supertabular}[]{@{}lllll@{}}
-% \toprule
-% \textbf{What is it that's going on?} & Houselights & Spotlight &
-% Chalkboard & Projector\tabularnewline
-% \midrule
-% \endhead
-% \textbf{On-stage monologue} & Low & ON & Low & OFF\tabularnewline
-% \textbf{Presenting slides} & Low & ON & Low & ON\tabularnewline
-% \textbf{Working through equations} & Low & ON & High &
-% OFF\tabularnewline
-% \textbf{Students discussing with each other} & High & OFF & Low &
-% OFF\tabularnewline
-% \textbf{Watching a movie} & Low & OFF & Low & ON\tabularnewline
-% \textbf{Cleaning the room after a movie} & High & OFF & High &
-% OFF\tabularnewline
-% \bottomrule
-% \end{supertabular}
-%
-% To convince yourself of the sociological stability of these
-% configurations, imagine you were watching a movie when suddenly the
-% house and chalkboard lights came up to full intensity. It would jar you
-% out of the experience. You might wonder whether something was wrong: is
-% there an emergency? Should you evacuate?
-%
-% The metaphor isn't perfect. Ontologically, for example, resource and
-% framing theory propose these constructs exist not in the world but in
-% the minds of individuals. But, the metaphor is quite useful for
-% understanding how individual elements---in this case lights---can work
-% in concert to create and sustain a stable frame. And, crucially for a
-% cognitive system, the metaphor lets us account for variation in
-% activity. The same lecture hall can become a window onto one person's
-% thoughts (monologue), a site for instruction (working through equations
-% at the board), a shared space for collaboration (student discussion), or
-% a place in need of repair (cleaning up) simply by varying the
-% intensities of lighting banks in particular ways.
-%
-% An example helps ground this in-pieces approach to epistemology. In
-% Russ, Coffey, Hammer, and Hutchison (2008), the authors describe the
-% situation where an elementary student reasons about why an empty juice
-% box collapses when you suck on the straw. One student gives what the
-% authors deem to be an excellent mechanistic account of why the juice box
-% collapses. But, as the teacher seems to steer the discussion toward
-% vocabulary---in this case, ``pressure''---the student clearly pulls back
-% from her mechanistic reasoning, seems much more diffident, and claims
-% that pressure is hard to explain. That example highlights the disconnect
-% between doing science as knowing vocabulary and doing science as
-% reasoning mechanistically. Moreover, it strikingly highlights that a
-% student who by all accounts produced an excellent explanation of how
-% pressure works was left nonetheless with the impression that pressure
-% was hard to explain.\footnote{In fairness to the teacher, I'm trying to
-%   focus on the result of the interaction and far less on the intent the
-%   teacher might have had. The student still left with a sense that
-%   science might be about vocabulary, even if that's not the view the
-%   teacher would espouse or was trying to enact in the moment.}
-%
+
+The catch here is that the plus operator takes on different roles in
+different languages because of how those languages define its use.
+Statement 1 increments a number in C; Statement 2 appends the letters
+``ly'' to a string; Statement 3 adds a layer of points to a statistical
+graphics plot. These different kinds of operations become even more
+apparent and consequential when, for example, such statements are
+repeated. In the R/ggplot2 code below,\footnote{In R, the assignment
+  operator can be written as a directional arrow. The symbol
+  \textless{}- (``less-than, hyphen'') indicates the value on the right
+  side of the symbol is being assigned to the variable on the left side
+  of the symbol. As used, the symbol itself is semantically equivalent
+  to having written an equals sign (``=``).} I'm using multiple
+reassignment statements to compose a statistical graphics plot. The
+layered creation of a plot invites a very different kind of conceptual
+interpretation than, say, repeatedly accumulating numbers into a running
+sum:
+
+p \textless{}- InitializeGgplot\_1w()
+
+p \textless{}- p + GrandMeanLine(owp)
+
+p \textless{}- p + GrandMeanPoint(owp)
+
+p \textless{}- p + ScaleX\_1w(owp)
+
+p \textless{}- p + ScaleY\_1w(owp)
+
+p \textless{}- p + JitteredScoresByGroupContrast(owp, jj)
+
+One obvious reason for thinking about this code with a different
+interpretive frame is that numeric addition is commutative; composing a
+plot is not necessarily commutative.\footnote{To convince yourself that
+  plot composition isn't commutative, imagine a scale function that
+  squares up the aspect ratio of a plot and another scale function that
+  sets the aspect ratio to 1.5:1. Applying the square function last
+  produces a square plot; applying it first produces a rectangular plot.
+  String concatenation is also not necessarily commutative. ``cat'' +
+  ``dog'' evaluates to ``catdog,'' while ``dog'' + ``cat'' evaluates to
+  ``dogcat.''} So, despite the syntactic similarity, reassignments that
+compose a plot using reassignment (as above) does not obey the same
+rules as reassignments for a running total. But, even within this code
+block, statements that look alike perform operations of a different
+nature. While some expressions (e.g, ``+ GrandMeanLine(owp)'') add a
+visual layer to a plot, others modify features of the plot (e.g, ``+
+Scale\_X(owp)'', which adjusts the scales on the plot's x-axis to fit
+the numeric range of the data).
+
+Given these motivating examples, it seems sensible to think there's
+utility in a programmer having different conceptual metaphors available
+to think about and work with code. Example 1 shows that choosing to
+apply knowledge from physics to a piece of code can change the cognitive
+nature of debugging. There, debugging a position-update statement
+becomes, in part, reasoning kinematically about the properties of motion
+trails.\footnote{For comparison, consider the argument that ringing an
+  aircraft speedometer with physical markers changes the nature of
+  cognition when pilots work to land a plane (Hutchins, 1995b).} Example
+2 shows that across languages, programmers might have to deploy
+different conceptual metaphors to reason about statements in a
+locally-consistent way. Knowing that plots in ggplot2 can be composed
+layer-by-layer with reassignment is crucial if you're trying to write or
+understand code that creates statistical graphics. But, I would argue
+that thinking about $\Box = \Box + \Box$ as ``compose new layer onto plot'' can and
+does appeal to different kinds of knowledge when compared to thinking
+about $\Box = \Box + \Box$ as ``include this addend in the sum,'' which itself can
+and does appeal to different kinds of concepts when compared to thinking
+about $\Box = \Box + \Box$ as ``increment the counter.''
+
+Stepping back, I can build the following argument
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Programming can be helped by applying conceptual models to code,
+  particularly when relevant domain-knowledge structures can
+  advantageously transform a problem (example 1)
+\item
+  But, conceptual models don't work all the time for all statements.
+  Because languages are designed differently, the same syntax can
+  actually correspond to very different operations in code (example 2).
+  And, that's true both within and across languages.
+\item
+  Consequently, it makes less sense to treat conceptual models as right
+  or wrong, and more sense to treat them as differentially advantageous
+  for thinking about what a piece of code does. (Thinking a ``+''
+  implies numerical addition isn't \emph{globally wrong} in JavaScript,
+  but it won't explain why 1 + ``1'' yields ``11'' as a result.)
+\item
+  It seems plausible that successful programmers, when reasoning about
+  or writing code, are able to dynamically access or deploy conceptual
+  models that are advantageous given the context (language, syntax,
+  surrounding code). Certainly such a supposition is in line with work
+  suggesting students have resources for thinking conceptually and
+  dynamically about how mathematics models real-world situations (Izsák,
+  2004; Sherin, 2001)
+\item
+  To model how programmers think with conceptual models, a suitable
+  framework should be able to account for the dynamic, context-sensitive
+  deployment of conceptual knowledge.
+\item
+  To model how programmers develop expertise, a suitable framework
+  should be able to describe higher-order phenomena. Such phenomena
+  include explaining how programmers come to have conceptual models or
+  generate new ones, why they decide to deploy them, and how programmers
+  consider which conceptual model (i.e., which way to think about code)
+  is appropriate.
+\end{enumerate}
+
+Taken together, these assertions propose criteria for how we might
+strive to model cognition in programming. Our modeling frameworks should
+be context-dependent, dynamic, and capable of explaining where
+conceptual models come from. They should also be able to account for
+phenomena that are not themselves conceptual, including what directs the
+use of certain kinds of conceptual knowledge. In the learning sciences,
+such models already exist and have proven useful and productive for
+thinking about thinking.
+
+\subsection{Manifold models of cognition explain context-dependence
+and the growth of
+expertise}\label{manifold-models-of-cognition-explain-context-dependence-and-the-growth-of-expertise}
+
+In 1993, a pair of articles in the learning sciences staked a strong
+claim for viewing knowledge as a network of pieces, isolated enough to
+be locally triggered but trainable enough to fire in larger concerted
+patterns (diSessa, 1993; Smith, diSessa, \& Roschelle, 1993). Informed
+in part by agent-based accounts of cognition (Minsky, 1986) and complex
+systems models (diSessa, 2002), the central tenets of an ``in-pieces''
+approach hold that knowledge is emergent from interacting primitives,
+rather than unitary and monolithic. An example from Smith, diSessa, and
+Roschelle helps illustrate the point.
+
+The authors show that we might think of a rubber band as a different
+conceptual entity depending on context. In several different
+situations---wrapped around a newspaper, pulled taut as a string, spun
+to store energy in a toy plane propeller---we intuitively think about
+the rubber band's physical behavior differently: one as a negligible
+part of the newspaper's point mass, another as a transverse pendulum
+(likely) obeying Hooke's Law, and the third as a torsional spring. Those
+differences in intuitive thinking reflect the contextual dependency of
+what we know about the physical world:
+
+In each of the rubberband examples, various pieces of intuitive physical
+knowledge describe the mechanism at work: the rubber band binds the
+newspaper, grips the jar lid, and acts a source of springiness for the
+bobbing object. Although a mapping cannot be made from the rubberband to
+scientific entities, it is quite easy to map these qualitatively
+distinct physical processes to scientific entities and laws. For
+example, instances of binding almost always map to a practically rigid
+body. Likewise, gripping maps to friction forces, and springiness maps
+to Hooke's law. This suggests that applicability can depend directly on
+our intuitive knowledge---knowledge that exists prior to any formal
+scientific training (Smith et al., 1993, p. 144).
+
+The in-pieces approach to modeling cognition has been used, among other
+things, to explain how experts reason about fractions and decimals
+(Smith et al., 1993), how students reason about forces in physics
+(diSessa \& Sherin, 1998; diSessa, 1993; Hammer, 1996; Sherin, 2001),
+how students construct and evaluate algebraic representations of
+physical situations (Izsák, 2004), and how knowledge transfers across
+contexts (Hammer et al., 2005; Wagner, 2006). Because its starting
+assumption is that knowledge is fragmented, knowledge-in-pieces can
+account for wide variations of how people---particularly novices---use
+knowledge on a moment-to-moment basis. In other words, because it
+assumes knowledge is local, it can still explain the kinds of
+globally-inconsistent ways people might reason about physical situations
+(diSessa, 1993). As a framework, an in-pieces approach ultimately argues
+that models of concept replacement and good/bad criteria for knowledge
+should be supplanted by a learning model of alignment/refinement of
+prior knowledge and the consideration of knowledge as
+productive/unproductive.
+
+Hammer and colleagues have worked to extend the in-pieces approach to
+explain how students' epistemological activity---how they orient toward
+knowledge and knowing in a context (Hammer et al., 2005; Hammer \& Elby,
+2002, 2003). Specifically, those authors use two core theoretical
+constructs to explain students' stances toward knowledge and knowing:
+
+\begin{itemize}
+\item
+  \emph{Epistemological Resources} are the epistemological equivalent of
+  diSessa's phenomenological primitives (p-prims). Resources, the
+  authors propose, are the atomic units involved in how people cognize
+  about the source of knowledge, the nature of knowledge, and
+  epistemological activities (Hammer \& Elby, 2003; Louca, Elby, Hammer,
+  \& Kagey, 2004).
+\item
+  \emph{Epistemological Frames} are the emergent result of subsets of
+  resources acting in concert. Drawing from both Goffman's (1974)
+  sociological notion of frame as structures of expectations and
+  subsequent work on framing in discourse (Tannen, 1993),
+  epistemological frames are a participant's local answer to the
+  question ``what is it {[}specifically, what knowledge activity{]}
+  that's going on here'' (Goffman, 1974, p. 8).
+\end{itemize}
+
+Resources can frames can interact in activity settings to produce
+larger-scale patterns called ``epistemological coherences'' (Rosenberg,
+Hammer, \& Phelan, 2006) where evidence from data suggests that a
+network of discrete cognitive units can nonetheless give rise to stable
+cognition.
+
+
+
+An example helps ground this in-pieces approach to epistemology. In
+Russ, Coffey, Hammer, and Hutchison (2008), the authors describe the
+situation where an elementary student reasons about why an empty juice
+box collapses when you suck on the straw. One student gives what the
+authors deem to be an excellent mechanistic account of why the juice box
+collapses. But, as the teacher seems to steer the discussion toward
+vocabulary---in this case, ``pressure''---the student clearly pulls back
+from her mechanistic reasoning, seems much more diffident, and claims
+that pressure is hard to explain. That example highlights the disconnect
+between doing science as knowing vocabulary and doing science as
+reasoning mechanistically. Moreover, it strikingly highlights that a
+student who by all accounts produced an excellent explanation of how
+pressure works was left nonetheless with the impression that pressure
+was hard to explain.\footnote{In fairness to the teacher, I'm trying to
+  focus on the result of the interaction and far less on the intent the
+  teacher might have had. The student still left with a sense that
+  science might be about vocabulary, even if that's not the view the
+  teacher would espouse or was trying to enact in the moment.}
+
+\subsection{Acknowledgments}\label{acknowledgments}
+
+Blinded for review.
+
+\clearpage
+
+\bibliographystyle{acm}
+\bibliography{bibliography}
