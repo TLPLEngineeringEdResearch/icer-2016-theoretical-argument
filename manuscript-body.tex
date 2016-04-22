@@ -366,8 +366,8 @@ students with ``bugs'' had wrong knowledge, the authors instead suppose
 cognitive bugs have plausible origins worth designing around. Moreover,
 they treat students' divergence from canon as \emph{an opportunity for
 research to learn from students}. Precisely because students saw
-functional differences (cf., diSessa, 1986) in semantically-equivalent
-PASCAL statements, Bonar and Soloway (1983) reflect that perhaps
+functional differences in semantically-equivalent
+PASCAL statements, Bonar and Soloway \cite{bonar_uncovering_1983} reflect that perhaps
 programming languages should be more expressive:
 
 \begin{quote}
@@ -430,87 +430,94 @@ section, such a view of understanding and refining student ideas---in contrast t
 constructivism, where cognition is viewed as the complex activation of
 manifold resources for thinking and knowing.
 
-\subsection{Examples motivate the need for contextual-sensitivity in
-modeling programming
-cognition}\label{examples-motivate-the-need-for-contextual-sensitivity-in-modeling-programming-cognition}
+\subsection{Examples motivate the need for contextual-sensitivity in modeling programming cognition}\label{examples-motivate-the-need-for-contextual-sensitivity-in-modeling-programming-cognition}
 
-Let's begin with two motivating examples. My aim with these examples is
+Let's begin with two motivating examples. Our aim with these examples is
 to show how a practicing programmer might employ specific, distinct
 conceptual models to reason locally about a piece of code. First,
 consider variants of the PASCAL statements from Bonar and Soloway
 (1983), where an assignment statement worked to increment a value and
-store the result back to that value. In Table 2 below, we imagine five
-different ways of writing a programming statement. Each of the five ways
-is semantically equivalent to the others (or near enough for explanatory
-purposes). And, in each example we add a layer of specificity to the
-syntax. we also propose a corresponding interpretation of how we might
-apply interpret and think about a given statement.\footnote{we assume for
-  simplicity's sake that all variables and functions in my code samples
-  evaluate to floating-point numbers that can be combined under
-  addition. we also assume, crucially, that all statements are in the
-  same hypothetical language and that the variable names connote nothing
-  to the computational interpreter.}
+store the result back to that value. Below are JavaScript statements that, as programmers, we have actually written in code as part of our careers. Each statement
+adheres to the structural similarity in Bonar and Soloway's PASCAL example \cite{bonar_uncovering_1983} discussed earlier. But, the comment above each statement reflects the \emph{functional understandings} \cite{disessa_models_1986} we made use of to write, interpret, and debug the code we were working on.
 
-\protect\hypertarget{ux5fToc252445956}{}{}Table -- Five different
-interpretations of semantically equivalent programming statements in the
-same language
+\begin{Shaded}
+\begin{Highlighting}[numbers=left,,]
+\CommentTok{// Increment a counter}
+\NormalTok{x }\OperatorTok{=} \NormalTok{x }\OperatorTok{+} \DecValTok{1}
 
-\begin{center}
-  \begin{tabular}{ | l | l |}
-    1 & \texttt{x\ =\ x\ +\ d} \\
-    2 & \texttt{x\ =\ x\ +\ update} \\
-    3 & \texttt{x\_position\ =\ x\_position\ +\ update} \\
-    4 & \texttt{x\_position\ =\ x\_position\ +\ update(t)} \\
-    5 & \texttt{x\_position\ =\ x\_position\ +\ update(...)} \\
-  \end{tabular}
-\end{center}
+\CommentTok{// Advance a simulation forward}
+\NormalTok{t }\OperatorTok{=} \NormalTok{t }\OperatorTok{+} \NormalTok{dt}
 
+\CommentTok{// Move an object under uniform velocity}
+\NormalTok{x_position }\OperatorTok{=} \NormalTok{x_position }\OperatorTok{+} \NormalTok{displacement}
 
-we stress that the third column is about \emph{how we might think about}
-each programming statement\emph{.} By no means am we making normative
+\CommentTok{// Accelerate an object along the x-dimension}
+\NormalTok{x_position }\OperatorTok{=} \NormalTok{x_position }\OperatorTok{+} \AttributeTok{displacement}\NormalTok{(t)}
+
+\CommentTok{// Jitter a plot point using a stochastic function}
+\NormalTok{y_position }\OperatorTok{=} \NormalTok{y_position }\OperatorTok{+} \AttributeTok{random_noise}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+We stress the comments reflect \emph{how one might think about}
+each programming statement. By no means are we making normative
 claims about how one \emph{ought} to think about it, or whether the
-statement actually does what its names might suggest it does. Rather,
+statement actually does what its variable names might suggest it does. Rather,
 ``How we might think about it'' reflects the kind of local meaning or
 interpretation we might attach to such a statement when we work with it,
-given my understanding of its role and context.
+given our understanding of its role and context.
 
-Consider specifically statements 1 and 4. Statement 1 could very well be
-an incrementer in some kind of iterative code. If we had to debug code
-that employs statement 1, what we might do is exploit my knowledge of
-what d is (does it hold a constant value? Is it 1?) and try inserting
-intermediate print statements into the iterative code. Doing so, we can
-inspect textually how values change with each iteration. In statement
-4's case, it could very well be that the position-update code animates
+Consider specifically lines 2 and 11. Line 2 could very well be
+an incrementer in some kind of iterative code. If we had to debug loop code
+that employs line 2, what we might do is try inserting
+intermediate print statements to see the value of x. We might also call on our knowledge that it's being incremented by 1 to check whether the difference between any two successive printouts is 1; if it isn't, we immediately know something's wrong. In line
+11's case, it could very well be that line 11's function is animating
 images on a screen. If there's a problem with that code, one of the
 easiest ways we might notice is that the acceleration seems off in the
-graphics. Consequently, my debugging might call upon knowledge we have
-from kinematics. we might try inserting code that draws a dot at the
-object's on-screen position with each iteration, leaving a trail we can
-visually inspect. we could then look at the path of the object's
+animation. Consequently, debugging might call upon knowledge we have
+from kinematics. We might try inserting code that draws a dot at the
+object's on-screen position with each iteration, leaving a trail of dots we can
+visually inspect. We could then look at the path of the object's
 trajectory and the spacing patterns between successive dots as a
-first-pass test of whether my code achieves the motion we want.
+first-pass test of whether the code achieves the motion we want. (If, for example, we're attempting a cubic easing animation, but the dots are all evenly spaced, then we might look first at the \texttt{displacement(t)}) function and what it's returning.
 
-To be clear, it's not just that graphics might improve my efficiency in
-debugging a statement. Rather, applying an interpretive frame that
-treats an assignment statement as a kinematic position update lets me
+To be clear, it's not just that graphics might improve our efficiency in
+debugging a statement like line 11. Rather, applying an interpretive frame that
+treats an assignment statement as a kinematic position update lets us
 \emph{use conceptual knowledge from physics} to diagnose and fix
-problems in my code. If we view the assignment statement as saying
-something about the motion of an object (cf., Hammer, 1994, p. 165), a
+problems in code. If we view the assignment statement as proposing
+something about the motion of an object---as, for example, when sense-making in science and engineering students can view equations as ``saying something'' about how a system behaves[blinded]---a
 field of knowledge and concomitant techniques from physics becomes
 available to me to think with. But, if we focus only on the
 semantic-level equivalence of statements 1 through 5, there would be no
 obvious reason for me to access what we know about physics in order to
 reason about the code.
 
-My second example concerns statements that are syntactically-similar,
-rather than semantically-similar. we proposed that the statements in
-Table 2 all came from the same language. But, another phenomenon comes
-into play when different languages use the same symbology for
-conceptually different operations. Table 3 shows examples of what look
+Our second example concerns statements that use the same symbol template for fundamentally different kinds of computation. In our JavaScript example statements, all code came from the same language. But, another phenomenon comes
+into play \emph{across} different languages when use the same symbology (written patterns) to stand for
+conceptually different operations. The statements below are examples of what look
 like semantically-equivalent operations, but in fact are not.
 
-\protect\hypertarget{ux5fToc252445957}{}{}Table -- Three
-syntactically-similar statements with very different semantics
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{// C - Increments the value of i by 1}
+\NormalTok{i = i + }\DecValTok{1}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{// JavaScript - Appends "ly" to word.toString()}
+\NormalTok{word }\OperatorTok{=} \NormalTok{word }\OperatorTok{+} \StringTok{"ly"}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# R/ggplot2 - Composes a layer of points onto a plot}
+\NormalTok{p =}\StringTok{ }\NormalTok{p +}\StringTok{ }\KeywordTok{geom_point}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
 
 % \begin{supertabular}[]{@{}llll@{}}
 % \toprule
@@ -529,49 +536,33 @@ syntactically-similar statements with very different semantics
 The catch here is that the plus operator takes on different roles in
 different languages because of how those languages define its use.
 Statement 1 increments a number in C; Statement 2 appends the letters
-``ly'' to a string; Statement 3 adds a layer of points to a statistical
+``ly'' to a string; Statement 3 composes a layer of points onto a statistical
 graphics plot. These different kinds of operations become even more
 apparent and consequential when, for example, such statements are
-repeated. In the R/ggplot2 code below,\footnote{In R, the assignment
-  operator can be written as a directional arrow. The symbol
-  \textless{}- (``less-than, hyphen'') indicates the value on the right
-  side of the symbol is being assigned to the variable on the left side
-  of the symbol. As used, the symbol itself is semantically equivalent
-  to having written an equals sign (``=``).} I'm using multiple
-reassignment statements to compose a statistical graphics plot. The
+repeated in the same language within the same file. In the R/ggplot2 code below, the author uses multiple
+reassignment statements to compose a statistical graphics plot.
+
+\begin{Shaded}
+\begin{Highlighting}[numbers=left,,]
+\NormalTok{p <-}\StringTok{ }\KeywordTok{InitializeGgplot_1w}\NormalTok{()}
+\NormalTok{p <-}\StringTok{ }\NormalTok{p +}\StringTok{ }\KeywordTok{GrandMeanLine}\NormalTok{(owp)}
+\NormalTok{p <-}\StringTok{ }\NormalTok{p +}\StringTok{ }\KeywordTok{GrandMeanPoint}\NormalTok{(owp)}
+\NormalTok{p <-}\StringTok{ }\NormalTok{p +}\StringTok{ }\KeywordTok{ScaleX_1w}\NormalTok{(owp)}
+\NormalTok{p <-}\StringTok{ }\NormalTok{p +}\StringTok{ }\KeywordTok{ScaleY_1w}\NormalTok{(owp)}
+\end{Highlighting}
+\end{Shaded}
+
+Despite the syntactic similarity, The
 layered creation of a plot invites a very different kind of conceptual
 interpretation than, say, repeatedly accumulating numbers into a running
-sum:
-
-p \textless{}- InitializeGgplot\_1w()
-
-p \textless{}- p + GrandMeanLine(owp)
-
-p \textless{}- p + GrandMeanPoint(owp)
-
-p \textless{}- p + ScaleX\_1w(owp)
-
-p \textless{}- p + ScaleY\_1w(owp)
-
-p \textless{}- p + JitteredScoresByGroupContrast(owp, jj)
-
-One obvious reason for thinking about this code with a different
-interpretive frame is that numeric addition is commutative; composing a
-plot is not necessarily commutative.\footnote{To convince yourself that
-  plot composition isn't commutative, imagine a scale function that
-  squares up the aspect ratio of a plot and another scale function that
-  sets the aspect ratio to 1.5:1. Applying the square function last
-  produces a square plot; applying it first produces a rectangular plot.
-  String concatenation is also not necessarily commutative. ``cat'' +
-  ``dog'' evaluates to ``catdog,'' while ``dog'' + ``cat'' evaluates to
-  ``dogcat.''} So, despite the syntactic similarity, reassignments that
-compose a plot using reassignment (as above) does not obey the same
-rules as reassignments for a running total. But, even within this code
+sum. One obvious reason for thinking about this code with a different
+interpretive frame than incrementation is that numeric addition is commutative; composing a
+plot is not necessarily commutative. So, despite the syntactic similarity, reassignments that
+compose a plot using reassignment (as above) do not obey the same
+rules as reassignments for a running total. But, it turns out the statements above don't obey the same rules of string concatenation either. Within this code
 block, statements that look alike perform operations of a different
-nature. While some expressions (e.g, ``+ GrandMeanLine(owp)'') add a
-visual layer to a plot, others modify features of the plot (e.g, ``+
-Scale\_X(owp)'', which adjusts the scales on the plot's x-axis to fit
-the numeric range of the data).
+nature. While some expressions (lines 2 and 3) compose
+visual layers onto a plot, others (lines 4 and 5) modify features of the plot, like the x and y scales.
 
 Given these motivating examples, it seems sensible to think there's
 utility in a programmer having different conceptual metaphors available
@@ -617,10 +608,7 @@ Stepping back, we can build the following argument
   It seems plausible that successful programmers, when reasoning about
   or writing code, are able to dynamically access or deploy conceptual
   models that are advantageous given the context (language, syntax,
-  surrounding code). Certainly such a supposition is in line with work
-  suggesting students have resources for thinking conceptually and
-  dynamically about how mathematics models real-world situations (Izsák,
-  2004; Sherin, 2001)
+  surrounding code). Certainly prior research demonstrates novices and experts both have resources for creating, evaluating, and adapting their own conceptual metaphors to suit the context of the problem \cite{hammer_static_2011,izsak_we_2003,izsak_students_2004}
 \item
   To model how programmers think with conceptual models, a suitable
   framework should be able to account for the dynamic, context-sensitive
