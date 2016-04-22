@@ -49,9 +49,6 @@
 \usepackage[numbers]{natbib}
 \usepackage{listings}
 \input{pandoc.cls}
-% pandoc's tightlist
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 \begin{document}
 
@@ -190,8 +187,15 @@ Authors Blinded For Review
 
 \keywords{ACM proceedings; \LaTeX; text tagging}
 
-\input{dissertation-export.tex}
+\input{manuscript-body.tex}
 
+\subsection{Acknowledgments}\label{acknowledgments}
 
+Blinded for review.
+
+\clearpage
+
+\bibliographystyle{acm}
+\bibliography{bibliography}
 
 \end{document}
