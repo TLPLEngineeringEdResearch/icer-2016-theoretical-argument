@@ -1,10 +1,1042 @@
-\section{Introduction}\label{introduction}
+\subsection{Introduction}\label{introduction-2}
+
+Although imaginative and carefully designed, the Harvard course taught
+that there is only one right way to approach the computer, a way that
+emphasizes control through structure and planning. There are many
+virtues to this computational approach (it certainly makes sense when
+dividing the labor on a large programming project), but Lisa and Robin
+have intellectual styles at war with it. Lisa says she has ``turned
+herself into a different kind of person'' in order to perform, and Robin
+says she has learned to ``fake it.'' Although both women are able to get
+good grades in their programming course, they represent casualties of
+this war. Both deny who they are in order to succeed. (Turkle \& Papert,
+1991, p. 165)
+
+Over 20 years ago Sherry Turkle and Seymour Papert called for
+epistemological pluralism in computing education. Their argument --- in
+my view ---had multiple parts:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Programming a computer involved a shift in how one thought about the
+  nature knowledge from a propositional \emph{what is} to an imperative
+  \emph{how to} (Abelson \& Sussman, 1996; Papert, 1980).
+\item
+  Historically, there was a tendency to treat computers and the act of
+  programming them as an extension of the same Western logico-deductive
+  knowledge tradition that fueled science.
+\item
+  Recent scholarship, often at the intersection of post-structuralism
+  and social studies of science, had been troubling the idea that
+  knowledge-work in science proceeded solely by way of logical
+  deductions (Keller, 1983; Latour, 1987; Traweek, 1988)
+\item
+  Data from professionals suggested programming, too, didn't proceed
+  solely by way of the structured-planning approach emergent from
+  Western logico-deductive knowledge traditions. There were many ways of
+  knowing and constructing knowledge in programming.
+\item
+  A viewpoint of \emph{epistemological pluralism} --- embracing multiple
+  kinds and ways of knowing --- was informing the field of science
+  studies but not, to a large degree, how education researchers thought
+  about or taught computing.
+\item
+  The lack of support for diverse ways of knowing in computing
+  classrooms demonstrably hurt students.
+\end{enumerate}
+
+To Turkle and Papert (1991), the result of this culturally-rooted
+epistemological tension was a war. More specifically, it was a war where
+students of computing were the casualties, and the aggressor was a
+distributed failure to recognize, embrace, and support diverse ways of
+knowing. While I think their strong-form characterization of a ``war''
+no longer applies, their consideration of epistemological issues is
+still relevant two decades later. An understanding that computing does
+in fact involve diverse ways of knowing should continue to inform
+research and discussions on learning
+
+This paper tries to model what directs and sustains students'
+in-the-moment activity when they program. Its focus is on early-stage
+program design; analyzing how what students say, do, write, and gesture
+\emph{even before they type code} can help us improve theories of
+cognition and activity in learning programming. Using a ``revelatory
+case study'' (Yin, 2009) of two students in an introductory programming
+course, I argue the following:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Students' early-stage design activity reveals patterns outside the
+  explanatory scope of misconception-based accounts of cognition.
+\item
+  For a subset of phenomena, we can recast students' productive
+  capacities and their difficulties in terms of epistemological stances.
+\item
+  Such recastings are analytically powerful. Beyond Rebecca and Lionel,
+  they could potentially explain the diversity of practices I saw other
+  students take up.
+\item
+  As evidenced by work in science and math education, dynamic
+  epistemological models can offer a lens for reforming assessment and
+  instruction.
+\end{enumerate}
+
+\subsection{Literature Review}\label{literature-review}
+
+I begin by exploring the historical legacy of Turkle and Papert's (1991)
+remarks on epistemological pluralism in computing. I'll then describe
+what I see as a well-intentioned obstacle: the research-based
+preoccupation with students' misconceptions in computing education.
+These two stra.
+
+\subsubsection{Computing culture should support a diversity of ways of
+knowing}\label{computing-culture-should-support-a-diversity-of-ways-of-knowing}
+
+Turkle \& Papert (1991) describe a tension between individuals and a
+kind of cultural collective. In this tension, individual students and
+their personally-identified ways of knowing were in conflict with the
+larger culture of computing and its manifested ways of knowing. Lisa,
+for instance, was a Harvard student who identified as a poet:
+
+Lisa experiences language as transparent, she knows where all the
+elements are at every point in the development of her ideas. She wants
+her relationship to computer language to be similarly transparent. When
+she builds large programs she prefers to write her own smaller
+``building block'' procedures even though she could use prepackaged ones
+from a program library; she resents the latter's opacity. (Turkle \&
+Papert, 1991, p. 164)
+
+Turkle and Papert connect Lisa's programming practices to Lisa's
+personal view of knowledge. She writes building block procedures because
+of a continuity between herself as knower-of-her-own-poetry and that of
+knower-of-her-own-programs. Across both contexts, Lisa \emph{resents
+opacity} because it is an obstacle to her knowing. But, that resentment
+slows her progress on projects in the class.
+
+In part because of her commitments to transparency and the difficulty
+they created, Lisa changed her approach to programming. She ultimately
+had to, in her words, ``be a different kind of person with the machine''
+(Turkle \& Papert, 1991, p. 164). Turkle and Papert explain:
+
+She had been told that the ``right way'' to do things was to control a
+program through planning and black­boxing, the technique that lets you
+exploit opacity to plan something large without knowing in advance how
+the details will be managed. Lisa recognized the value of these
+techniques --- for someone else. She struggled against using them as the
+starting points for her learning. Lisa ended up abandoning the fight,
+doing things ``their way,'' and accepting the inevitable alienation from
+her work. (Turkle \& Papert, 1991, p. 164)
+
+The phrase ``inevitable alienation'' is particularly damning. One might
+accuse Turkle and Papert (1991) of hyperbole, but research from other
+disciplines suggests they're not overstating the case. Identity
+alienation for epistemological reasons --- or some variation of them ---
+is playing out in other subjects as well.
+
+Connections and tensions between identities, learning, and personal ways
+of knowing are not unique to computing education. Wortham (2006), for
+example, detailed instances of social identification and academic
+identity as \emph{jointly emerging} in a combined high school English
+and History class. Nasir and colleagues explored how different learning
+environments afford access to identity, domain practices, and
+self-expression (Nasir \& Cooks, 2009; Nasir \& Hand, 2008). To single
+out one study, Nasir \& Hand (2008) followed players ``from the
+{[}basketball{]} court to the classroom.'' They found the court afforded
+players a sense of role on the team, chances to be expressive through
+play, and ``access to the domain {[}of basketball{]} as a whole'' (Nasir
+\& Hand, 2006, p. 147). Comparatively, the mathematics classroom offered
+little (if any) sense that students were on a team, a much narrower role
+for them as having either right or wrong answers, and no strong sense of
+self-expression or creativity through activity. These markedly different
+contexts led not only to differences in kinds of activity but, Nasir and
+Hand (2006) argue, divergent \emph{practice-linked identities} for the
+players. In a sense, players had a different identity on the court than
+they did in the mathematics classroom because who they were was strongly
+coupled to a sense of their relationship with a practice.
+
+Boaler's work on learning and identity in mathematics classrooms (Boaler
+\& Greeno, 2000; Boaler, 1998, 2000, 2002) offers resonant findings. In
+particular, Boaler (2000) strongly echoes the student voices in Turkle
+and Papert (1991). Where Turkle and Papert's aggressor is the dominant
+computing culture, Boaler describes a beast with similar effects in the
+form of ``school mathematics'' --- the \emph{monotonous},
+\emph{meaningless} (Boaler, 2002, pp. 383--384) imposition of routinized
+mathematical procedures in ways that seem far removed from the real
+world. Of school mathematics, Boaler writes:
+
+School mathematics, for many of them, was \emph{of another world} and to
+fully engage in that world, students needed to suspend their knowledge
+of the real world, suppress their desire to interact with others, and
+strive to reproduce standard procedures that held little meaning for
+them. (Boaler, 2002, p. 392 emphasis in original)
+
+Schoenfeld (1988, 1991) had already argued school mathematics could and
+did depart substantially from the core of mathematical thinking. Boaler
+established that such school mathematics could alienate learners
+(Boaler, 1998, 2000) and influence their feelings about pursuing
+mathematics after secondary school (Boaler \& Greeno, 2000).
+
+Most recently, Danielak, Gupta, and Elby (in press) extended those
+findings in engineering education. In their 3 ½ year case study of an
+electrical engineering undergraduate named ``Michael,'' those authors
+argued Michael's practice of sense-making in engineering coursework was
+strongly coupled to his identity. Michael's passion for deeply
+understanding concepts, much like Lisa's (Turkle \& Papert, 1991) desire
+to understand every element of her program, did not mesh neatly with the
+larger culture of his courses. But, because Michael's practice of
+sense-making entwined with his identity, forces that pushed against
+sense-making alienated him. That tension was particularly pointed when
+Michael described his father's resistance to Michael's way of thinking:
+
+{[}My dad said{]} ``you're just an undergraduate. Nobody expects
+undergraduates to understand how anything works. That's why you go to
+graduate school.'' I was like ``look, you know. I'm gonna be an unhappy
+person if I have to....I have life goals other than to just get a good
+grade on the exam. Other things are important to me.'' (Danielak et al.,
+in press)
+
+And, much like Turkle and Papert's (1991) Lisa, Michael learned to
+curtail parts of his identity to get by in class:
+
+I think the reason {[}pursuing deep learning{]} actually hasn't affected
+my GPA is because I view learning as a hobby. So, as with any hobby, you
+shouldn't let it interfere your GPA. But it \emph{is} one of my hobbies,
+and I \emph{do} enjoy learning, I just---up to the point where I get my
+grades done \{raises eyebrow\}. (Danielak et al., in press)
+
+Ultimately, research suggests the identity-epistemology tensions Turkle
+and Papert (1991) described in computing resonates with those found in
+related disciplines. And, what such accounts --- particularly those of
+Boaler and others (Boaler \& Greeno, 2000; Boaler, 1998, 2000, 2002;
+Danielak et al., in press) --- have in common is a culturally-sanctioned
+``right way'' (Turkle \& Papert, 1991, p. 164) of thinking or knowing
+that alienates some students. Avowedly such ways of knowing have use and
+value. Turkle \& Papert themselves acknowledge ``there are many
+virtues'' to black-boxing and top-down design in programming (Turkle \&
+Papert, 1991, p. 165). But,
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  When a preponderance of results from science studies suggests a
+  plurality of ways of knowing among practicing scientists and
+  programmers, and
+\item
+  When research from education shows that the inflexible imposition of
+  one way of knowing above all else is alienating students, then
+\item
+  It's worth reconsidering whether a narrow sense of what counts as
+  knowing might still be hindering improvements in computing education.
+\end{enumerate}
+
+In the next section, I turn to misconceptions research in computing
+education. In keeping with observations 1--3,
+
+\subsubsection{Misconceptions research in computing education tends to
+ignore students' productive
+knowledge}\label{misconceptions-research-in-computing-education-tends-to-ignore-students-productive-knowledge}
+
+I argue research
+approaches that inflexibly privilege canonical knowledge do so at the
+expense of other productive knowledge and ways of knowing that students
+have.
+
+In the past three decades, educational research has had a marked focus
+on students' misconceptions in programming. It's a focus with a sensible
+origin. Students get things wrong in programming --- often
+systematically so --- and in ways that seem resistant to instruction.
+The cause of those errors is theorized to be something cognitive,
+whether it's a ``bug'' (Pea et al., 1987; Pea, 1986; VanLehn, 1990) a
+``misconception'' (Bayman \& Mayer, 1983; Bonar \& Soloway, 1985;
+Clancy, 2004; Gal-Ezer \& Zur, 2004; Herman et al., 2008; Kaczmarczyk et
+al., 2010), a ``belief'' (Fleury, 1993) or a ``student-constructed
+rule'' (Fleury, 1991, 2000). Instruction should try to identify,
+address, and correct these misconceptions (Clancy, 2004) because they
+can represent barriers to learning.
+
+How that line of thinking and research becomes problematic is two-fold.
+First, when taken in total the alleged brokenness of student knowledge
+begins eclipsing all else in studying the cognition of learning to
+program. In other words, most cognitively-focused educational research
+in computer science treats students as having varied degrees of
+deficiency with respect to canonical knowledge. Below is an unordered,
+partial sampling of topics about which researchers have documented
+students' misconceptions. Note across the list the variation in both the
+grain sizes of students' misconceptions and the programming languages in
+which they manifest:
+
+\begin{itemize}
+\item
+  Objects in object-oriented programming (Holland, Griffiths, \&
+  Woodman, 1997)
+\item
+  Algorithms and data structures (Danielsiek, Paul, \& Vahrenhold, 2012;
+  Paul \& Vahrenhold, 2013)
+\item
+  Programming statements in BASIC (Bayman \& Mayer, 1983)
+\item
+  Programming in Java (Fleury, 2000)
+\item
+  Programming in Pascal (Fleury, 1993)
+\item
+  Parameter-passing (Fleury, 1991)
+\item
+  Arrays in Java (Kaczmarczyk et al., 2010)
+\item
+  Objects in Java (Kaczmarczyk et al., 2010)
+\item
+  Algorithms and computational complexity (Trakhtenbrot, 2013)
+\item
+  Boolean logic (Herman et al., 2008)
+\item
+  The efficiency of algorithms (Gal-Ezer \& Zur, 2004)
+\item
+  The Build-Heap algorithm (Seppälä, Malmi, \& Korhonen, 2006)
+\item
+  Hashtables (Patitsas, Craig, \& Easterbrook, 2013)
+\item
+  The correctness of programs (Kolikant \& Mussai, 2008)
+\end{itemize}
+
+Clancy (2004) provides a comprehensive overview of this line of
+research, though in the past decade it has only grown. Indeed, roughly
+half the articles above were published in the ten years since Clancy's
+overview.
+
+Identifying and removing barriers to student learning seems like a good
+thing. So, it should follow that cataloging student misconceptions and
+developing remedies for them should also be a good thing. But, the
+logical implication isn't that clean. In some cases students display
+productive, useful knowledge that's either ignored or outright
+criticized by researchers. Aligning students toward canonical knowledge
+makes sense, but doing so at the expense of---or in direct contradiction
+to---useful ways of knowing seems undesirable at best. Next, I expand on
+two examples from misconceptions research in programming. Specifically,
+I show how and why I think a misconceptions focus in programming casts
+aside students' useful intuitions and understandings.
+
+The first example comes from Kaczmarczyk et al. (2010). Part of that
+study involved giving students snippets of Java code and asking students
+to diagram (or pseudo-code) how the information would be stored in
+memory. Below I have reproduced the code for Problem 2 (Kaczmarczyk et
+al., 2010, p. 110):
+
+Cheese{[}{]} cheeses = new Cheese{[}4{]};
+
+Meat{[}{]} meats = new Meat{[}2{]};
+
+Turkey turkey;
+
+Ham ham;
+
+RoastBeef roastBeef;
+
+boolean lettuce = true;
+
+boolean tomato = true;
+
+SauceType sauceType = new SauceType();
+
+int numMeat;
+
+int numCheese;
+
+In diagramming this information, a student in the study makes a mistake:
+
+Student3 makes incorrect assumptions about connections between variables
+to the extent that the student makes a mistake concerning the types of
+the variables. As a result, the student places Objects of different
+types in an array whose type matches none of them: ``And so because
+there's two arrays, cheese and meats, uh, all those turkey and ham and
+roast beef are gonna be sorted into the meats array.'' (Kaczmarczyk et
+al., 2010, p. 110)
+
+The researchers are correct in the sense that \textbf{turkey} and
+\textbf{ham} and \textbf{roastBeef} will \emph{not} be sorted into the
+\textbf{meats} array. First, there is no code here that places
+\textbf{turkey} and \textbf{ham} in the array; there is only code that
+declares them as variables. Moreover, as written, an attempt to place
+\textbf{turkey} and \textbf{ham} and \textbf{roastBeef} into the array
+would fail. Because of type restrictions in Java, only objects of class
+Meat (or objects that inherit from class Meat) can go in the array.
+\textbf{turkey} and \textbf{ham} and \textbf{roastBeef} are, perhaps
+confusingly, references to object instances of classes \textbf{Turkey}
+and \textbf{Ham} and \textbf{RoastBeef}, so in the current snippet they
+cannot enter an array of type \textbf{Meat} because (1) they don't yet
+exist as objects and (2) even if they did exist, their types don't match
+the array's type. The authors call this misconception \emph{semantics to
+semantics}, which occurs ``when the student inappropriately
+assume{[}s{]} details about the relationship and operation of code
+samples, although such information was neither given nor implied''
+(Kaczmarczyk et al., 2010, p. 110).
+
+Again, the researchers are right that the student is failing to describe
+the code in a way consistent with canon.\footnote{In this case, canon is
+  the specifications and operations of the Java language and its
+  compilers.} But, in their non-canonical thinking Student3 evidences
+potentially productive insights about design. Precisely \emph{because}
+there is no code stating that \textbf{turkey} and \textbf{roastBeef} and
+ham are sorted into the array, the student is \emph{inferring} that to
+be true. And, while that behavior is not what's happening, it
+\emph{would} be sensible to design a program where specific instances of
+classes \textbf{Turkey} and \textbf{Ham} and \textbf{RoastBeef} could go
+into an array of type \textbf{Meat}. To do so, a designer could define
+\textbf{Turkey} and \textbf{Ham} and \textbf{RoastBeef} as inheriting
+from \textbf{Meat}.
+
+Student3 has an idea about a relationship between entities where that
+relationship is not specified in the code. Kaczmarczyk et al.
+(Kaczmarczyk et al., 2010) focus only on the downside of the idea: the
+student fails to display a proper understanding of how arrays work in
+Java. Moreover, the student might be prone to similar mistakes of
+inferring information that does not actually exist in code. But, there
+is also an upside of this idea. Because Student3 is thinking about
+real-world propositions like turkey and ham being kinds of meat, they
+might be prepared to appreciate and discuss an object-oriented way to
+put turkey in a \textbf{Meat} array. But, that possibility is
+speculative conjecture. We can't know for certain whether Student3 could
+be tipped into a productive object-oriented design activity around the
+meats example because that question was not a focus of the research.
+
+My second example of research that criticizes students' non-canonical
+understandings comes from Bonar and Soloway's (1983) study of Pascal
+programmers, part of which is discussed in Pea (1986). A student in
+Bonar \& Soloway's study was asked to ``Write a program which reads in
+ten integers and prints the average of those integers'' (Bonar \&
+Soloway, 1983, p. 12). In pseudo-code, she wrote:
+
+Repeat
+
+(1) Read a number (Num)
+
+(1a) Count := Count + 1
+
+(2) Add the number to Sum
+
+(2a) Sum := Sum + Num
+
+(3) until Count :=10
+
+(4) Average := Sum div Num
+
+(5) writeln (`average = `,Average)
+
+The interviewer then asked whether (1a) and (2a) were ``the same kinds
+of statements.'' That interchange is reproduced here:
+
+Interviewer: Steps 1a and 2a: are those the same kinds of statements?
+
+Subject: How's that, are they the same \emph{kind}. Ahhh, ummm, not
+exactly, because with this {[}1a{]} you are adding - you initialize it
+at zero and you're adding one to it {[}points to the right side of 1a{]}
+which is just a constant kind of thing.
+
+Interviewer: Yes
+
+Subject: {[}points to 2a{]} Sum, initialized, to, uhh Sum to Sum plus
+Num, ahh - thats {[}points to left side of 2a{]} storing two values in
+one, two variables {[}points to Sum and Num on the right side of 2a{]}.
+That's {[}now points to 1a{]} a counter, that's what keeps the whole
+loop under control. Whereas, this thing {[}points to 2a{]} was probably
+the most interesting thing\ldots{}about Pascal when I hit it. That you
+could have the same, you sorta have the same thing here {[}points to
+1a{]}, it was interesting that you cold have, you could save space by
+having the Sum re-storing information on the left with two different
+things there {[}points to right side of 2a{]}, so I didn't need to have
+two. No, they're different to me.
+
+Interviewer: So - in summary, how do you think of 1a?
+
+Subject: I think of this {[}point to 1a{]} as just a constant, something
+that keeps the loop under control. And this {[}points to 2a{]} has
+something to do with something that you are gonna, that stores more
+kinds of information that you are going to take out of the loop with
+you. (Bonar \& Soloway, 1983, p. 12)
+
+Pea's (1986) interpretation? ``Here, again, we see the student believing
+that the programming language knows more about her intentions than it
+possibly can'' (p. 32).
+
+As before, this student has an idea about relationships in code. Pea
+(1986) see the downside of her idea: believing PASCAL can understand
+shades of programmer intent when, in fact, it cannot. And again, that
+downside is real. It could cause trouble for this programmer later on if
+she expects PASCAL to interpret her intent and it cannot.
+
+In defense of the student, the question --- as asked --- is vague. Are
+those statements the same \emph{to whom and in what way?} Pea (1986)
+treats the data as though she meant ``the same to PASCAL.'' Indeed,
+maybe she did, in which case his interpretation has traction. But,
+another interpretation is that she meant to herself, or to someone else
+reading the code. Those statements might not be the same \emph{to her}
+because she treats (1a) as having a function of controlling iteration
+while (2a)'s job is to combine two numbers into a new sum.
+
+These two purposes, which for the sake of description I'll call
+\emph{keeping control} and \emph{totaling up} are, in a sense,
+different. The PASCAL compiler (and runtime) does not differentiate
+them, but humans can. And, humans may well \emph{want} to differentiate
+them. diSessa (1986) describes exactly this kind of differentiation as a
+consequence of separating the structural understanding of a programming
+language from a functional understanding of a language. As an example,
+he discusses the structure/function difference with respect to
+variables:
+
+The structural aspects of a variable in a computer language are given
+primarily by the rules for setting their values and for getting access
+to their values. These rules apply in all contexts. In contrast, a
+variable's functions might vary. Sometimes they might be described as
+``a flag'' or more generally, as ``a communications device.'' At other
+times a variable might function as ``a counter,'' ``data,'' or
+``input.'' (diSessa, 1986, p. 202)
+
+The student in Bonar \& Soloway's (1983) study did not show evidence of
+understanding the structural similarities between (1a) and (2a) in her
+pseudo-code. And, those authors as well as Pea (1986) justly insist that
+similarity is important for students to understand. From a conceptual
+standpoint, seeing the structural similarity constitutes a part of
+``knowing'' PASCAL. But, even if knowing PASCAL were not the goal,
+seeing the similarity helps one to take the perspective of a computing
+agent that has no means for discerning programmer intent. Such
+perspective-taking may help students avoid mistakes that arise from
+over-assuming what a computer ``understands.''
+
+The student did show evidence of understanding a functional difference
+between (1a) and (2a), but Pea (1986) does not remark on that kind of
+understanding at all.\footnote{Also glossed over is, to me, another
+  important difference: a programmer might not know in advance which
+  numbers are being passed in to the sum statement. So, in advance the
+  programmer can say nothing about how the value of \textbf{Sum} will
+  change as the loop iterates. In contrast, the programmer knows exactly
+  how the value of Count will change with each loop iteration.} Again, I
+claim this oversight is part of a subtle but observable trend in
+programming misconceptions literature. While, or perhaps because
+research has been so preoccupied warring with students' problematic
+knowledge, it has sometimes failed to recover the productive knowledge
+(or resources for building it) students have. In this example, the
+student already has a grasp that syntactically similar statements could
+serve different conceptual purposes. Hypothetically, the student might
+use that information in design by calling up the ``◻=︎ + 1'' syntactical
+template when the situation seems to demand \emph{keeping control},
+while calling up ``◻= ︎ + number'' when \emph{totaling up} is the goal.
+And, the idea that structurally identical symbol templates can serve
+different functional and conceptual purposes fits precisely in line with
+Sherin's (2001) theory of symbolic forms. For example, the symbolic
+forms \emph{parts-of-a-whole} and \emph{base+change} have different
+conceptual schemata. Parts-of-a-whole refers to the contributions of
+component entities while base±change describes a kind of accumulation.
+Specifically, the terms in base±change ``play different roles'' (Sherin,
+2001, p. 534) But, the two distinct conceptual schemata share what I
+would argue is the same concrete symbol template of how to write an
+expression: ◻=︎ + ◻.
+
+The problem, for learning to program, comes in needing to fluidly
+interpret and write code in languages that may demand incommensurable,
+or at least distinct, conceptual schemata. As I show later in Table 4,
+three current programming languages make remarkably different use of the
+plus sign (+) as an operator. Crucially, some of the entailing ways to
+make sense of how + works in those languages don't exist in Sherin's
+(2001) catalog of conceptual schemata. In other words, I would argue
+there are conceptual ways a programmer may need to think about
+interpreting or writing a ◻=︎ +◻ symbol template that Sherin doesn't
+enumerate.\footnote{One of the most obvious is the movement from seeing
+  ``◻=︎ +◻'' as a statement of equality to seeing it as the storage of a
+  sum to a variable.} To follow that implication, the canonical body of
+knowledge about which programmers must reason is itself fractured,
+because different languages design their operations around different
+symbolic and conceptual metaphors.
+
+To return to misconceptions, what drives research on students'
+misconceptions is largely a need to get students to program computers
+and reason about computation in ways that are canonically correct. And,
+those are assuredly worthwhile goals. But, as I've argued, we can
+already identify cases where a narrow misconceptions focus is silent
+about or dismissive of students' useful intuitions. We can also identify
+the further problems whereby unilateral emphasis on one language's canon
+opposes the vocabulary of symbolic forms (and diverse conceptual
+schemata) expert programmers ultimately need (Sherin, 2001) Taken in
+total, that silence, dismissiveness, and narrow view of refining
+knowledge perpetuates a deficit-focused discourse about student's
+knowledge in computing.\footnote{Worse still, in my view, is that there
+  is a pattern of researchers failing to discuss or acknowledge
+  students' productive knowledge \emph{even when their own data supports
+  it}.} Such a perspective also fails to address what aspects of
+students reasoning might get broken by attempts to ``fix'' such
+``misconceptions''.
+
+It's important to note that misconceptions research in computing didn't
+always treat students' non-canonical knowledge this way. I begin the
+next section by backtracing to some of the earliest work on students'
+cognitive ``bugs''. There, we find researchers talking more explicitly
+about what's useful in students' non-canonical knowledge---a stance
+largely absent in modern computing misconceptions research.
+
+\subsubsection{Not all cognitive programming bugs imply a problem with
+the
+student}\label{not-all-cognitive-programming-bugs-imply-a-problem-with-the-student}
+
+What's curious about Pea's (1986) comments on Bonar \& Soloway (1983) is
+that Pea drew different conclusions from the data than Bonar and Soloway
+did. Pea (1986) emphasized that when the student thought two
+semantically-equivalent assignment statements in PASCAL were different,
+it was a problem of egocentrism: ``students assume that there is
+\emph{more} of their meaning for what they want to accomplish in the
+program than is actually present in the code they have written'' (p.
+30). In other words, Pea treated the data as a fairly clear example of a
+class of bugs. Specifically, he saw a bug class in which students simply
+assumed the interpreter or runtime could infer the code author's shades
+of intent.
+
+Bonar and Soloway (1983), by contrast, were less quick to make
+inferences either about the nature of the bug or about the intervention
+it entailed. Rather than jump to definitive conclusions, they were
+circumspect:
+
+It is not clear exactly how to react to the bugs we have uncovered in
+novice understanding of programming. In some cases it may be appropriate
+to design new languages or constructs. Often, better instruction would
+take care of the problem. The intent of our studies is to better
+understand the source of the mismatches and misconceptions that cause
+novice bugs. Only once a bug is uncovered and understood are we ready to
+create a remedy for that bug. (Bonar \& Soloway, 1983, p. 12)
+
+That the authors would even consider developing new constructs or
+languages is a noteworthy distinction. Rather than assume in toto that
+students with ``bugs'' had wrong knowledge, the authors instead suppose
+cognitive bugs have plausible origins worth designing around. Moreover,
+they treat students' divergence from canon as \emph{an opportunity for
+research to learn from students}. Precisely because students saw
+functional differences (cf., diSessa, 1986) in semantically-equivalent
+PASCAL statements, Bonar and Soloway (1983) reflect that perhaps
+programming languages should be more expressive:
+
+We find it quite interesting that novices seem to understand the role or
+strategy of statements more clearly than the standard semantics. Such
+roles discussed here include ``counter variable,'' ``running total
+variable,'' ``running total loop,'' and ``first, then rest loop''. (See
+Soloway et al {[}1982b{]} for a detailed discussion of novice looping
+strategies.) Much work in programming languages is concerned with
+allowing a programmer to more accurately express his or her intentions
+in the program. Perhaps we can learn something from novices here - our
+programming systems should support recording the roles the programmer
+intends for various statements and variables. (Bonar \& Soloway, 1983,
+p. 12)
+
+Again, what's noteworthy here is that rather than treating students'
+non-canonical views as a burden for instruction, Bonar and Soloway
+instead see them as an opportunity for programming language designers to
+make languages better.
+
+That insight---that instruction and design can meet novices where they
+are---carries through to their final remarks about studying and
+analyzing novice programming knowledge:
+
+The experience and understanding of a novice are available for analysis.
+In particular, our results suggest that the knowledge people bring from
+natural language has a key effect on their early programming efforts.
+Our work suggests that we need serious study of the knowledge novices
+bring to a computing system. For most computerized tasks there is some
+model that a novice will use in his or her first attempts. We need to
+understand when it is appropriate to appeal to this model, and, when
+necessary, how to move a novice to some more appropriate model. (Bonar
+\& Soloway, 1983, p. 13)
+
+I assume Bonar and Soloway structured their final line deliberately. If
+so, their phrasing has three consequences:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Appealing to novice's existing models gets precedence. That is,
+  understanding how to leverage novices' existing knowledge comes first
+  in research.
+\item
+  Changing the models novices have comes next, and ``when necessary.''
+\item
+  They speak of ``how to move a novice to some more appropriate model,''
+  which does not necessarily entail the removal or destruction of
+  novice's existing models.
+\end{enumerate}
+
+Taken together, these points convey a sense of how Bonar and Soloway
+view learning and instruction in computing. Instruction explicitly
+includes appeals to prior models and knowledge students might already
+have. Learning, meanwhile, involves the movement \emph{when necessary}
+to more appropriate models of computation. As I explain in the next
+section, such a view exactly aligns with a particular branch of
+constructivism, where cognition is viewed as the complex activation of
+manifold resources for thinking and knowing.
+
+\subsubsection{Examples motivate the need for contextual-sensitivity in
+modeling programming
+cognition}\label{examples-motivate-the-need-for-contextual-sensitivity-in-modeling-programming-cognition}
+
+Let's begin with two motivating examples. My aim with these examples is
+to show how a practicing programmer might employ specific, distinct
+conceptual models to reason locally about a piece of code. First,
+consider variants of the PASCAL statements from Bonar and Soloway
+(1983), where an assignment statement worked to increment a value and
+store the result back to that value. In Table 2 below, I imagine five
+different ways of writing a programming statement. Each of the five ways
+is semantically equivalent to the others (or near enough for explanatory
+purposes). And, in each example I add a layer of specificity to the
+syntax. I also propose a corresponding interpretation of how I might
+apply interpret and think about a given statement.\footnote{I assume for
+  simplicity's sake that all variables and functions in my code samples
+  evaluate to floating-point numbers that can be combined under
+  addition. I also assume, crucially, that all statements are in the
+  same hypothetical language and that the variable names connote nothing
+  to the computational interpreter.}
+
+\protect\hypertarget{ux5fToc252445956}{}{}Table -- Five different
+interpretations of semantically equivalent programming statements in the
+same language
+
+\begin{center}
+  \begin{tabular}{ | l | l |}
+    1 & \texttt{x\ =\ x\ +\ d} \\
+    2 & \texttt{x\ =\ x\ +\ update} \\
+    3 & \texttt{x\_position\ =\ x\_position\ +\ update} \\
+    4 & \texttt{x\_position\ =\ x\_position\ +\ update(t)} \\
+    5 & \texttt{x\_position\ =\ x\_position\ +\ update(...)} \\
+  \end{tabular}
+\end{center}
+
+
+% I stress that the third column is about \emph{how I might think about}
+% each programming statement\emph{.} By no means am I making normative
+% claims about how one \emph{ought} to think about it, or whether the
+% statement actually does what its names might suggest it does. Rather,
+% ``How I might think about it'' reflects the kind of local meaning or
+% interpretation I might attach to such a statement when I work with it,
+% given my understanding of its role and context.
+%
+% Consider specifically statements 1 and 4. Statement 1 could very well be
+% an incrementer in some kind of iterative code. If I had to debug code
+% that employs statement 1, what I might do is exploit my knowledge of
+% what d is (does it hold a constant value? Is it 1?) and try inserting
+% intermediate print statements into the iterative code. Doing so, I can
+% inspect textually how values change with each iteration. In statement
+% 4's case, it could very well be that the position-update code animates
+% images on a screen. If there's a problem with that code, one of the
+% easiest ways I might notice is that the acceleration seems off in the
+% graphics. Consequently, my debugging might call upon knowledge I have
+% from kinematics. I might try inserting code that draws a dot at the
+% object's on-screen position with each iteration, leaving a trail I can
+% visually inspect. I could then look at the path of the object's
+% trajectory and the spacing patterns between successive dots as a
+% first-pass test of whether my code achieves the motion I want.
+%
+% To be clear, it's not just that graphics might improve my efficiency in
+% debugging a statement. Rather, applying an interpretive frame that
+% treats an assignment statement as a kinematic position update lets me
+% \emph{use conceptual knowledge from physics} to diagnose and fix
+% problems in my code. If I view the assignment statement as saying
+% something about the motion of an object (cf., Hammer, 1994, p. 165), a
+% field of knowledge and concomitant techniques from physics becomes
+% available to me to think with. But, if I focus only on the
+% semantic-level equivalence of statements 1 through 5, there would be no
+% obvious reason for me to access what I know about physics in order to
+% reason about the code.
+%
+% My second example concerns statements that are syntactically-similar,
+% rather than semantically-similar. I proposed that the statements in
+% Table 2 all came from the same language. But, another phenomenon comes
+% into play when different languages use the same symbology for
+% conceptually different operations. Table 3 shows examples of what look
+% like semantically-equivalent operations, but in fact are not.
+%
+% \protect\hypertarget{ux5fToc252445957}{}{}Table -- Three
+% syntactically-similar statements with very different semantics
+%
+% \begin{supertabular}[]{@{}llll@{}}
+% \toprule
+% \textbf{Statement } & Programming Syntax & Language & How I think about
+% it\tabularnewline
+% \midrule
+% \endhead
+% \textbf{1} & i = i + 1 & C & \textbf{Increments} i by 1\tabularnewline
+% \textbf{2} & w = w + ``ly'' & JavaScript & \textbf{Appends} ``ly'' to
+% the string w\tabularnewline
+% \textbf{3} & p = p + geom\_point() & R (ggplot2) & \textbf{Composes} a
+% layer of points onto a plot p\tabularnewline
+% \bottomrule
+% \end{supertabular}
+%
+% The catch here is that the plus operator takes on different roles in
+% different languages because of how those languages define its use.
+% Statement 1 increments a number in C; Statement 2 appends the letters
+% ``ly'' to a string; Statement 3 adds a layer of points to a statistical
+% graphics plot. These different kinds of operations become even more
+% apparent and consequential when, for example, such statements are
+% repeated. In the R/ggplot2 code below,\footnote{In R, the assignment
+%   operator can be written as a directional arrow. The symbol
+%   \textless{}- (``less-than, hyphen'') indicates the value on the right
+%   side of the symbol is being assigned to the variable on the left side
+%   of the symbol. As used, the symbol itself is semantically equivalent
+%   to having written an equals sign (``=``).} I'm using multiple
+% reassignment statements to compose a statistical graphics plot. The
+% layered creation of a plot invites a very different kind of conceptual
+% interpretation than, say, repeatedly accumulating numbers into a running
+% sum:
+%
+% p \textless{}- InitializeGgplot\_1w()
+%
+% p \textless{}- p + GrandMeanLine(owp)
+%
+% p \textless{}- p + GrandMeanPoint(owp)
+%
+% p \textless{}- p + ScaleX\_1w(owp)
+%
+% p \textless{}- p + ScaleY\_1w(owp)
+%
+% p \textless{}- p + JitteredScoresByGroupContrast(owp, jj)
+%
+% One obvious reason for thinking about this code with a different
+% interpretive frame is that numeric addition is commutative; composing a
+% plot is not necessarily commutative.\footnote{To convince yourself that
+%   plot composition isn't commutative, imagine a scale function that
+%   squares up the aspect ratio of a plot and another scale function that
+%   sets the aspect ratio to 1.5:1. Applying the square function last
+%   produces a square plot; applying it first produces a rectangular plot.
+%   String concatenation is also not necessarily commutative. ``cat'' +
+%   ``dog'' evaluates to ``catdog,'' while ``dog'' + ``cat'' evaluates to
+%   ``dogcat.''} So, despite the syntactic similarity, reassignments that
+% compose a plot using reassignment (as above) does not obey the same
+% rules as reassignments for a running total. But, even within this code
+% block, statements that look alike perform operations of a different
+% nature. While some expressions (e.g, ``+ GrandMeanLine(owp)'') add a
+% visual layer to a plot, others modify features of the plot (e.g, ``+
+% Scale\_X(owp)'', which adjusts the scales on the plot's x-axis to fit
+% the numeric range of the data).
+%
+% Given these motivating examples, it seems sensible to think there's
+% utility in a programmer having different conceptual metaphors available
+% to think about and work with code. Example 1 shows that choosing to
+% apply knowledge from physics to a piece of code can change the cognitive
+% nature of debugging. There, debugging a position-update statement
+% becomes, in part, reasoning kinematically about the properties of motion
+% trails.\footnote{For comparison, consider the argument that ringing an
+%   aircraft speedometer with physical markers changes the nature of
+%   cognition when pilots work to land a plane (Hutchins, 1995b).} Example
+% 2 shows that across languages, programmers might have to deploy
+% different conceptual metaphors to reason about statements in a
+% locally-consistent way. Knowing that plots in ggplot2 can be composed
+% layer-by-layer with reassignment is crucial if you're trying to write or
+% understand code that creates statistical graphics. But, I would argue
+% that thinking about ◻ = ◻ + ◻ as ``compose new layer onto plot'' can and
+% does appeal to different kinds of knowledge when compared to thinking
+% about ◻ = ◻ + ◻ as ``include this addend in the sum,'' which itself can
+% and does appeal to different kinds of concepts when compared to thinking
+% about ◻ = ◻ + ◻ as ``increment the counter.''
+%
+% Stepping back, I can build the following argument
+%
+% \begin{enumerate}
+% \def\labelenumi{\arabic{enumi}.}
+% \item
+%   Programming can be helped by applying conceptual models to code,
+%   particularly when relevant domain-knowledge structures can
+%   advantageously transform a problem (example 1)
+% \item
+%   But, conceptual models don't work all the time for all statements.
+%   Because languages are designed differently, the same syntax can
+%   actually correspond to very different operations in code (example 2).
+%   And, that's true both within and across languages.
+% \item
+%   Consequently, it makes less sense to treat conceptual models as right
+%   or wrong, and more sense to treat them as differentially advantageous
+%   for thinking about what a piece of code does. (Thinking a ``+''
+%   implies numerical addition isn't \emph{globally wrong} in JavaScript,
+%   but it won't explain why 1 + ``1'' yields ``11'' as a result.)
+% \item
+%   It seems plausible that successful programmers, when reasoning about
+%   or writing code, are able to dynamically access or deploy conceptual
+%   models that are advantageous given the context (language, syntax,
+%   surrounding code). Certainly such a supposition is in line with work
+%   suggesting students have resources for thinking conceptually and
+%   dynamically about how mathematics models real-world situations (Izsák,
+%   2004; Sherin, 2001)
+% \item
+%   To model how programmers think with conceptual models, a suitable
+%   framework should be able to account for the dynamic, context-sensitive
+%   deployment of conceptual knowledge.
+% \item
+%   To model how programmers develop expertise, a suitable framework
+%   should be able to describe higher-order phenomena. Such phenomena
+%   include explaining how programmers come to have conceptual models or
+%   generate new ones, why they decide to deploy them, and how programmers
+%   consider which conceptual model (i.e., which way to think about code)
+%   is appropriate.
+% \end{enumerate}
+%
+% Taken together, these assertions propose criteria for how we might
+% strive to model cognition in programming. Our modeling frameworks should
+% be context-dependent, dynamic, and capable of explaining where
+% conceptual models come from. They should also be able to account for
+% phenomena that are not themselves conceptual, including what directs the
+% use of certain kinds of conceptual knowledge. In the learning sciences,
+% such models already exist and have proven useful and productive for
+% thinking about thinking.
+%
+% \subsubsection{Manifold models of cognition explain context-dependence
+% and the growth of
+% expertise}\label{manifold-models-of-cognition-explain-context-dependence-and-the-growth-of-expertise}
+%
+% In 1993, a pair of articles in the learning sciences staked a strong
+% claim for viewing knowledge as a network of pieces, isolated enough to
+% be locally triggered but trainable enough to fire in larger concerted
+% patterns (diSessa, 1993; Smith, diSessa, \& Roschelle, 1993). Informed
+% in part by agent-based accounts of cognition (Minsky, 1986) and complex
+% systems models (diSessa, 2002), the central tenets of an ``in-pieces''
+% approach hold that knowledge is emergent from interacting primitives,
+% rather than unitary and monolithic. An example from Smith, diSessa, and
+% Roschelle helps illustrate the point.
+%
+% The authors show that we might think of a rubber band as a different
+% conceptual entity depending on context. In several different
+% situations---wrapped around a newspaper, pulled taut as a string, spun
+% to store energy in a toy plane propeller---we intuitively think about
+% the rubber band's physical behavior differently: one as a negligible
+% part of the newspaper's point mass, another as a transverse pendulum
+% (likely) obeying Hooke's Law, and the third as a torsional spring. Those
+% differences in intuitive thinking reflect the contextual dependency of
+% what we know about the physical world:
+%
+% In each of the rubberband examples, various pieces of intuitive physical
+% knowledge describe the mechanism at work: the rubber band binds the
+% newspaper, grips the jar lid, and acts a source of springiness for the
+% bobbing object. Although a mapping cannot be made from the rubberband to
+% scientific entities, it is quite easy to map these qualitatively
+% distinct physical processes to scientific entities and laws. For
+% example, instances of binding almost always map to a practically rigid
+% body. Likewise, gripping maps to friction forces, and springiness maps
+% to Hooke's law. This suggests that applicability can depend directly on
+% our intuitive knowledge---knowledge that exists prior to any formal
+% scientific training (Smith et al., 1993, p. 144).
+%
+% The in-pieces approach to modeling cognition has been used, among other
+% things, to explain how experts reason about fractions and decimals
+% (Smith et al., 1993), how students reason about forces in physics
+% (diSessa \& Sherin, 1998; diSessa, 1993; Hammer, 1996; Sherin, 2001),
+% how students construct and evaluate algebraic representations of
+% physical situations (Izsák, 2004), and how knowledge transfers across
+% contexts (Hammer et al., 2005; Wagner, 2006). Because its starting
+% assumption is that knowledge is fragmented, knowledge-in-pieces can
+% account for wide variations of how people---particularly novices---use
+% knowledge on a moment-to-moment basis. In other words, because it
+% assumes knowledge is local, it can still explain the kinds of
+% globally-inconsistent ways people might reason about physical situations
+% (diSessa, 1993). As a framework, an in-pieces approach ultimately argues
+% that models of concept replacement and good/bad criteria for knowledge
+% should be supplanted by a learning model of alignment/refinement of
+% prior knowledge and the consideration of knowledge as
+% productive/unproductive.
+%
+% Hammer and colleagues have worked to extend the in-pieces approach to
+% explain how students' epistemological activity---how they orient toward
+% knowledge and knowing in a context (Hammer et al., 2005; Hammer \& Elby,
+% 2002, 2003). Specifically, those authors use two core theoretical
+% constructs to explain students' stances toward knowledge and knowing:
+%
+% \begin{itemize}
+% \item
+%   \emph{Epistemological Resources} are the epistemological equivalent of
+%   diSessa's phenomenological primitives (p-prims). Resources, the
+%   authors propose, are the atomic units involved in how people cognize
+%   about the source of knowledge, the nature of knowledge, and
+%   epistemological activities (Hammer \& Elby, 2003; Louca, Elby, Hammer,
+%   \& Kagey, 2004).
+% \item
+%   \emph{Epistemological Frames} are the emergent result of subsets of
+%   resources acting in concert. Drawing from both Goffman's (1974)
+%   sociological notion of frame as structures of expectations and
+%   subsequent work on framing in discourse (Tannen, 1993),
+%   epistemological frames are a participant's local answer to the
+%   question ``what is it {[}specifically, what knowledge activity{]}
+%   that's going on here'' (Goffman, 1974, p. 8).
+% \end{itemize}
+%
+% Resources can frames can interact in activity settings to produce
+% larger-scale patterns called ``epistemological coherences'' (Rosenberg,
+% Hammer, \& Phelan, 2006) where evidence from data suggests that a
+% network of discrete cognitive units can nonetheless give rise to stable
+% cognition.
+%
+% A useful conceptual metaphor for resources and framing is to think about
+% a lecture hall with different sets of lights: a spotlight in the back to
+% highlight a lecturer, chalkboard lights, house lights, and a projector.
+% Each light has an individual brightness, but the lights are only
+% controllable at the per-bulb level. In that sense, they are atomic. But,
+% light patterns interact with one another to create a field of lighting
+% for the room. Thus, lights are a bit like resources, and different light
+% configurations can correspond to different, sociologically-stable uses
+% of the room.
+%
+% \protect\hypertarget{ux5fToc252445958}{}{}Table -- Using room lighting
+% configurations to think about epistemological framing
+%
+% \begin{supertabular}[]{@{}lllll@{}}
+% \toprule
+% \textbf{What is it that's going on?} & Houselights & Spotlight &
+% Chalkboard & Projector\tabularnewline
+% \midrule
+% \endhead
+% \textbf{On-stage monologue} & Low & ON & Low & OFF\tabularnewline
+% \textbf{Presenting slides} & Low & ON & Low & ON\tabularnewline
+% \textbf{Working through equations} & Low & ON & High &
+% OFF\tabularnewline
+% \textbf{Students discussing with each other} & High & OFF & Low &
+% OFF\tabularnewline
+% \textbf{Watching a movie} & Low & OFF & Low & ON\tabularnewline
+% \textbf{Cleaning the room after a movie} & High & OFF & High &
+% OFF\tabularnewline
+% \bottomrule
+% \end{supertabular}
+%
+% To convince yourself of the sociological stability of these
+% configurations, imagine you were watching a movie when suddenly the
+% house and chalkboard lights came up to full intensity. It would jar you
+% out of the experience. You might wonder whether something was wrong: is
+% there an emergency? Should you evacuate?
+%
+% The metaphor isn't perfect. Ontologically, for example, resource and
+% framing theory propose these constructs exist not in the world but in
+% the minds of individuals. But, the metaphor is quite useful for
+% understanding how individual elements---in this case lights---can work
+% in concert to create and sustain a stable frame. And, crucially for a
+% cognitive system, the metaphor lets us account for variation in
+% activity. The same lecture hall can become a window onto one person's
+% thoughts (monologue), a site for instruction (working through equations
+% at the board), a shared space for collaboration (student discussion), or
+% a place in need of repair (cleaning up) simply by varying the
+% intensities of lighting banks in particular ways.
+%
+% An example helps ground this in-pieces approach to epistemology. In
+% Russ, Coffey, Hammer, and Hutchison (2008), the authors describe the
+% situation where an elementary student reasons about why an empty juice
+% box collapses when you suck on the straw. One student gives what the
+% authors deem to be an excellent mechanistic account of why the juice box
+% collapses. But, as the teacher seems to steer the discussion toward
+% vocabulary---in this case, ``pressure''---the student clearly pulls back
+% from her mechanistic reasoning, seems much more diffident, and claims
+% that pressure is hard to explain. That example highlights the disconnect
+% between doing science as knowing vocabulary and doing science as
+% reasoning mechanistically. Moreover, it strikingly highlights that a
+% student who by all accounts produced an excellent explanation of how
+% pressure works was left nonetheless with the impression that pressure
+% was hard to explain.\footnote{In fairness to the teacher, I'm trying to
+%   focus on the result of the interaction and far less on the intent the
+%   teacher might have had. The student still left with a sense that
+%   science might be about vocabulary, even if that's not the view the
+%   teacher would espouse or was trying to enact in the moment.}
+%
+
 
 \subsection{Acknowledgments}\label{acknowledgments}
 
-Blinded for review. \cite{hammer_tapping_2003}
-
-\cite{hammer_two_1989}
+Blinded for review.
 
 \clearpage
 
