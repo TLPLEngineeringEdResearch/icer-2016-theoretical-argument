@@ -63,7 +63,7 @@ which they manifest:
   Polynomial and mapping reduction in the Theory and Computation of Complexity \cite{gal-ezer_identification_2016}
 \end{itemize}
 
-Clancy (2004) provides a comprehensive overview of this line of
+Clancy \cite{clancy_misconceptions_2004} provides a comprehensive overview of this line of
 research, though in the past decade it has only grown. Indeed, roughly
 half the articles above were published in the ten years since Clancy's
 overview.
@@ -80,60 +80,56 @@ two examples from misconceptions research in programming. Specifically,
 I show how and why I think a misconceptions focus in programming casts
 aside students' useful intuitions and understandings.
 
-The first example comes from Kaczmarczyk et al. (2010). Part of that
+The first example comes from \cite{kaczmarczyk_identifying_2010}. Part of that
 study involved giving students snippets of Java code and asking students
 to diagram (or pseudo-code) how the information would be stored in
-memory. Below I have reproduced the code for Problem 2 (Kaczmarczyk et
-al., 2010, p. 110):
+memory. Below I have reproduced the code for Problem 2:
 
-Cheese{[}{]} cheeses = new Cheese{[}4{]};
-
-Meat{[}{]} meats = new Meat{[}2{]};
-
-Turkey turkey;
-
-Ham ham;
-
-RoastBeef roastBeef;
-
-boolean lettuce = true;
-
-boolean tomato = true;
-
-SauceType sauceType = new SauceType();
-
-int numMeat;
-
-int numCheese;
+\hypertarget{sandiwches-code}{\label{sandwiches-code}}
+\begin{Shaded}
+\begin{Highlighting}[numbers=left,,]
+\NormalTok{Cheese[] cheeses = }\KeywordTok{new} \NormalTok{Cheese[}\DecValTok{4}\NormalTok{];}
+\NormalTok{Meat[] meats = }\KeywordTok{new} \NormalTok{Meat[}\DecValTok{2}\NormalTok{];}
+\NormalTok{Turkey turkey;}
+\NormalTok{Ham ham;}
+\NormalTok{RoastBeef roastBeef;}
+\DataTypeTok{boolean} \NormalTok{lettuce = }\KeywordTok{true}\NormalTok{;}
+\DataTypeTok{boolean} \NormalTok{tomato = }\KeywordTok{true}\NormalTok{;}
+\NormalTok{SauceType sauceType = }\KeywordTok{new} \FunctionTok{SauceType}\NormalTok{();}
+\DataTypeTok{int} \NormalTok{numMeat;}
+\DataTypeTok{int} \NormalTok{numCheese;}
+\end{Highlighting}
+\end{Shaded}
 
 In diagramming this information, a student in the study makes a mistake:
 
-Student3 makes incorrect assumptions about connections between variables
-to the extent that the student makes a mistake concerning the types of
-the variables. As a result, the student places Objects of different
-types in an array whose type matches none of them: ``And so because
-there's two arrays, cheese and meats, uh, all those turkey and ham and
-roast beef are gonna be sorted into the meats array.'' (Kaczmarczyk et
-al., 2010, p. 110)
+\begin{quote}
+  Student3 makes incorrect assumptions about connections between variables
+  to the extent that the student makes a mistake concerning the types of
+  the variables. As a result, the student places Objects of different
+  types in an array whose type matches none of them: ``And so because
+  there's two arrays, cheese and meats, uh, all those turkey and ham and
+  roast beef are gonna be sorted into the meats array.'' \cite{kaczmarczyk_identifying_2010}
+\end{quote}
 
-The researchers are correct in the sense that \textbf{turkey} and
-\textbf{ham} and \textbf{roastBeef} will \emph{not} be sorted into the
-\textbf{meats} array. First, there is no code here that places
-\textbf{turkey} and \textbf{ham} in the array; there is only code that
+The researchers are correct in the sense that \texttt{turkey} and
+\texttt{ham} and \texttt{roastBeef} will \emph{not} be sorted into the
+\texttt{meats} array. First, there is no code here that places
+\texttt{turkey} and \texttt{ham} in the array; there is only code that
 declares them as variables. Moreover, as written, an attempt to place
-\textbf{turkey} and \textbf{ham} and \textbf{roastBeef} into the array
+\texttt{turkey} and \texttt{ham} and \texttt{roastBeef} into the array
 would fail. Because of type restrictions in Java, only objects of class
 Meat (or objects that inherit from class Meat) can go in the array.
-\textbf{turkey} and \textbf{ham} and \textbf{roastBeef} are, perhaps
-confusingly, references to object instances of classes \textbf{Turkey}
-and \textbf{Ham} and \textbf{RoastBeef}, so in the current snippet they
-cannot enter an array of type \textbf{Meat} because (1) they don't yet
+\texttt{turkey} and \texttt{ham} and \texttt{roastBeef} are, perhaps
+confusingly, references to object instances of classes \texttt{Turkey}
+and \texttt{Ham} and \texttt{RoastBeef}, so in the current snippet they
+cannot enter an array of type \texttt{Meat} because (1) they don't yet
 exist as objects and (2) even if they did exist, their types don't match
 the array's type. The authors call this misconception \emph{semantics to
 semantics}, which occurs ``when the student inappropriately
 assume{[}s{]} details about the relationship and operation of code
 samples, although such information was neither given nor implied''
-(Kaczmarczyk et al., 2010, p. 110).
+\cite{kaczmarczyk_identifying_2010}.
 
 Again, the researchers are right that the student is failing to describe
 the code in a way consistent with canon.\footnote{In this case, canon is
