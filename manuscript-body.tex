@@ -1,4 +1,16 @@
+\section{Abstract}\label{Abstract}
+
 \section{Introduction}\label{Introduction}
+
+In 1996, learning scientist David Hammer argued ``Not all thoughts students express need to be understood as directly reflecting stable, stored knowledge structures. What the misconceptions perspective treats as a stored construct may alternatively be treated as an act of construction.'' \cite{hammer_misconceptions_1996}. In the 20 years since, researchers---particularly in science education---have pushed cognitive models beyond the static assumptions of classical misconception accounts of knowledge. But, a striking preponderance of computing education research models cognition via misconceptions. Such research assumes students have entrenched, wrong ideas about computation. And, while misconceptions research in computing education has advanced our understanding of teaching and learning, its narrow also begets problems growing too big to ignore:
+
+\begin{enumerate}
+  \tightlist
+  \item When we use misconceptions to treat student ideas as right or wrong, we establish and perpetuate a deficit model of student understanding.
+  \item The more classical misconceptions-basedresearch we publish as a community, the stronger that deficit narrative becomes in our discourse.
+\end{enumerate}
+
+In this paper, we aim to start remedying those problems. We first reanalyze historical data using a knowledge-in-pieces perspective to show how we might recover accounts of students' productive knowledge. We then argue through example that expertise in programming can involve the fluid and active construction of conceptual metaphors to deal with idiosyncrasies within and across programming languages. These examples help broaden our sense of applicable cognitive theory by showing how distributed cognition can be a powerful framework for analyzing activity. Finally, we conclude with an exploration of epistemological concerns, arguing that a fundamental concern for our research community should be paying attention to what counts as knowledge and knowing in computing learning environments.
 
 \subsection{Misconceptions research in computing education tends to
 ignore students' productive
@@ -489,10 +501,10 @@ trajectory and the spacing patterns between successive dots as a
 first-pass test of whether the code achieves the motion we want. (If, for example, our code is supposed to achieve a cubic easing animation, but the dots in the trail are all evenly spaced, basic kinematics tells us our object isn't accelerating at all. And, if there's no acceleration, we can pursue a strong hunch that the \texttt{displacement(t)}) function is returning the same constant value with each iternation.
 
 To be clear, it's not just that graphics might improve our efficiency in
-debugging a statement like line 11. Rather, choosing to
-use conceptual knowledge from physics to understand a piece of code transforms debugging a position-update statement
-into a different activity: reasoning kinematically about the properties of motion
-trails. For a comparative perspective, consider Hutchins's argument that for aircraft pilots, ringing an aircraft speedometer with physical markers transforms the cognition involved in landing a plane \cite{hutchins_how_1995}:
+debugging a statement like line 11. Rather, applying an interpretive frame that
+treats an assignment statement as a kinematic position update lets us
+\emph{use conceptual knowledge from physics} to diagnose and fix
+problems in code. For a comparative perspective, consider Hutchins's argument that for aircraft pilots, ringing an aircraft speedometer with physical markers transforms the cognition involved in landing a plane:
 
 \begin{quote}
   Without a speed bug, on final approach the PF [Pilot Flying] must remember the approach speed, read the airspeed indicator scale to find the remembered value of the approach speed on the airspeed indicator scale, and compare the position of the ASI [Airspeed Indicator] needle on the scale with the position of the approach speed on the scale. With the salmon bug set, the pilot no longer needs to read the airspeed indicator scale. He or she simply looks to see whether or not the indicator needle is lined up with the salmon bug. Thus, a memory and scale reading task is transformed into a judgment of spatial adjacency. \cite{hutchins_how_1995}
@@ -506,12 +518,11 @@ Our physics debugging example and Hutchins's speed bug example \cite{hutchins_ho
   \item That distribution doesn't simply enhance, but rather \emph{transforms} the nature of the activity, allowing cognitive agents to bring to bear resources that the prior or original context didn't afford.
 \end{enumerate}
 
-In Hutchins's
+In Hutchins's \cite{hutchins_how_1995} example, pilots distribute cognition across time (1) by making approach speed calculations mid-flight, well before they're needed. Pilots then distribute those calculations across space (2) by ringing the speedometer with bugs to represent distinct speeds. And, it is this act of distribution that lets pilots use spatial-adjacency perception (visually making sure the needle is on the bugs) during approach instead of having to calculate, compute, and compare speed numbers during approach.
 
-the cognitive act of debugging in this instance. Applying an interpretive frame that
-treats an assignment statement as a kinematic position update lets us
-\emph{use conceptual knowledge from physics} to diagnose and fix
-problems in code.   There,  For comparison, consider
+In our kinematics debugging example, cognition gets distributed across time and space (1) by creating a visual trace of the animated object's position (a persistent trail of dots). And, it is this act of dot-tracing that lets a programmer invokve spatial-adjacency perception and conceptual kinematics knowledge (how positions uniformly sampled in time can reflect constant velocity vs. acceleration) that wouldn't seem applicable if the reassignment statement were stripped of its context.
+
+the cognitive act of debugging in this instance.    There,  For comparison, consider
 
  If we view the assignment statement as proposing
 something about the motion of an object---as, for example, when sense-making in science and engineering students can view equations as ``saying something'' about how a system behaves[blinded]---a
@@ -521,7 +532,7 @@ semantic-level equivalence of statements 1 through 5, there would be no
 obvious reason for me to access what we know about physics in order to
 reason about the code.
 
-\subsection{Example 2: The Same Symbol Template Within The Same Language Can Still Mean Different Things}
+\subsubsection{Example 2: The Plus Sign Means Lots of Things}
 
 Our second example concerns statements that use the same symbol template for fundamentally different kinds of computation. In our JavaScript example statements, all code came from the same language. But, another phenomenon comes
 into play \emph{across} different languages when use the same symbology (written patterns) to stand for
@@ -549,19 +560,6 @@ like semantically-equivalent operations, but in fact are not.
 \end{Highlighting}
 \end{Shaded}
 
-% \begin{supertabular}[]{@{}llll@{}}
-% \toprule
-% \textbf{Statement } & Programming Syntax & Language & How we think about
-% it\tabularnewline
-% \midrule
-% \endhead
-% \textbf{1} & i = i + 1 & C & \textbf{Increments} i by 1\tabularnewline
-% \textbf{2} & w = w + ``ly'' & JavaScript & \textbf{Appends} ``ly'' to
-% the string w\tabularnewline
-% \textbf{3} & p = p + geom\_point() & R (ggplot2) & \textbf{Composes} a
-% layer of points onto a plot p\tabularnewline
-% \bottomrule
-% \end{supertabular}
 
 The catch here is that the plus operator takes on different roles in
 different languages because of how those languages define its use.
@@ -569,7 +567,11 @@ Statement 1 increments a number in C; Statement 2 appends the letters
 ``ly'' to a string; Statement 3 composes a layer of points onto a statistical
 graphics plot. These different kinds of operations become even more
 apparent and consequential when, for example, such statements are
-repeated in the same language within the same file. In the R/ggplot2 code below, the author uses multiple
+repeated in the same language within the same file, as we'll see in Example 3.
+
+\subsubsection{Example 3: The Same Symbol Template \emph{Within} The Same Language Can Still Mean Different Things}
+
+In the R/ggplot2 code below, the author uses multiple
 reassignment statements to compose a statistical graphics plot.
 
 \begin{Shaded}
@@ -625,7 +627,7 @@ Stepping back, we can build the following argument
   But, conceptual models don't work all the time for all statements.
   Because languages are designed differently, the same syntax can
   actually correspond to very different operations in code (example 2).
-  And, that's true both within and across languages.
+  And, that's true both within and across languages (example 3).
 \item
   Consequently, it makes less sense to treat conceptual models as right
   or wrong, and more sense to treat them as differentially advantageous
@@ -659,7 +661,7 @@ use of certain kinds of conceptual knowledge. In the learning sciences,
 such models already exist and have proven useful and productive for
 thinking about thinking.
 
-\subsection{Manifold models of cognition explain context-dependence
+\subsection{Manifold models of cognition can explain context-dependence
 and the growth of
 expertise}\label{manifold-models-of-cognition-explain-context-dependence-and-the-growth-of-expertise}
 
@@ -675,11 +677,10 @@ Roschelle helps illustrate the point.
 
 The authors show that we might think of a rubber band as a different
 conceptual entity depending on context. In several different
-situations---wrapped around a newspaper, pulled taut as a string, spun
+situations---wrapped around a newspaper, suspending a bob weight, pulled taut as a string, spun
 to store energy in a toy plane propeller---we intuitively think about
 the rubber band's physical behavior differently: one as a negligible
-part of the newspaper's point mass, another as a transverse pendulum
-(likely) obeying Hooke's Law, and the third as a torsional spring. Those
+part of the newspaper's point mass, two different kinds of harmonic pendulums, and finally a torsional spring. Those
 differences in intuitive thinking reflect the contextual dependency of
 what we know about the physical world:
 
@@ -744,19 +745,21 @@ An example helps ground this in-pieces approach to epistemology. Russ, Coffey, H
 situation where an elementary student reasons about why an empty juice
 box collapses when you suck on the straw \cite{russ_making_2008}. One student gives what the
 authors deem to be an excellent mechanistic account of why the juice box
-collapses. But, as the teacher seems to steer the discussion toward
-vocabulary---in this case, ``pressure''---the student clearly pulls back
+collapses:
+
+\begin{quote}
+  In explaining the phenomenon, Erin focuses on the role played by the air located inside the juice box. She describes the air inside as actively pushing out on all sides of the box holding them out and flat. When that air is removed from the box (by sucking it out through the straw), there is no longer anything pushing from the inside to hold the box out, so the sides cave in. We call this description of the phenomenon the “inside-pusher” model because of its focus on what happens inside the box. \cite{russ_making_2008}
+\end{quote}
+
+But, as the teacher seems to steer the discussion toward canonically correct
+vocabulary---in this case, ``pressure''---and Erin clearly pulls back
 from her mechanistic reasoning, seems much more diffident, and claims
 that pressure is hard to explain. That example highlights the disconnect
 between doing science as knowing vocabulary and doing science as
 reasoning mechanistically. Moreover, it strikingly highlights that a
 student who by all accounts produced an excellent explanation of how
 pressure works was left nonetheless with the impression that pressure
-was hard to explain.\footnote{In fairness to the teacher, I'm trying to
-  focus on the result of the interaction and far less on the intent the
-  teacher might have had. The student still left with a sense that
-  science might be about vocabulary, even if that's not the view the
-  teacher would espouse or was trying to enact in the moment.}
+was hard to explain. In other words, in that moment what counted as knowing was using the word pressure. Erin's mechanistic explanation---beautiful and complex as it was---didn't use that magic word, and in a possible effort to push the class toward canonical behavior, the teacher shut down Erin's reasoning.
 
 \subsection{Acknowledgments}\label{acknowledgments}
 
