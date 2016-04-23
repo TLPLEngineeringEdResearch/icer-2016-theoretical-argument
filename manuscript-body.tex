@@ -434,7 +434,11 @@ manifold resources for thinking and knowing.
 
 Let's begin with two motivating examples. Our aim with these examples is
 to show how a practicing programmer might employ specific, distinct
-conceptual models to reason locally about a piece of code. First,
+conceptual models to reason locally about a piece of code.
+
+\subsubsection{Example 1: Thinking With Kinematics Can Transform a Debugging Problem}
+
+First,
 consider variants of the PASCAL statements from Bonar and Soloway
 (1983), where an assignment statement worked to increment a value and
 store the result back to that value. Below are JavaScript statements that, as programmers, we have actually written in code as part of our careers. Each statement
@@ -467,31 +471,57 @@ statement actually does what its variable names might suggest it does. Rather,
 interpretation we might attach to such a statement when we work with it,
 given our understanding of its role and context.
 
-Consider specifically lines 2 and 11. Line 2 could very well be
+Consider specifically what would happen if we found ourselves needing to debug lines 2 and 11. Line 2 could very well be
 an incrementer in some kind of iterative code. If we had to debug loop code
 that employs line 2, what we might do is try inserting
-intermediate print statements to see the value of x. We might also call on our knowledge that it's being incremented by 1 to check whether the difference between any two successive printouts is 1; if it isn't, we immediately know something's wrong. In line
+intermediate print statements to see the value of x. We might also call on our knowledge that it's being incremented by 1 to check whether the difference between any two successive printouts is 1; if it isn't, we immediately know something's wrong. But to diagnose a potential problem in line 11, we might take an altogether different strategy.
+
+
+In line
 11's case, it could very well be that line 11's function is animating
-images on a screen. If there's a problem with that code, one of the
-easiest ways we might notice is that the acceleration seems off in the
-animation. Consequently, debugging might call upon knowledge we have
-from kinematics. We might try inserting code that draws a dot at the
-object's on-screen position with each iteration, leaving a trail of dots we can
+images on a screen. Suppose that's the case. If there's a problem with that code, one of the
+easiest ways we might notice is that the \emph{acceleration} seems off in the
+animation. Consequently, in debugging we might call upon knowledge we have
+from kinematics to conceptually model what our code is doing. We might try inserting code that draws a dot at the
+animated object's on-screen position with each iteration, leaving a trail of dots we can
 visually inspect. We could then look at the path of the object's
 trajectory and the spacing patterns between successive dots as a
-first-pass test of whether the code achieves the motion we want. (If, for example, we're attempting a cubic easing animation, but the dots are all evenly spaced, then we might look first at the \texttt{displacement(t)}) function and what it's returning.
+first-pass test of whether the code achieves the motion we want. (If, for example, our code is supposed to achieve a cubic easing animation, but the dots in the trail are all evenly spaced, basic kinematics tells us our object isn't accelerating at all. And, if there's no acceleration, we can pursue a strong hunch that the \texttt{displacement(t)}) function is returning the same constant value with each iternation.
 
 To be clear, it's not just that graphics might improve our efficiency in
-debugging a statement like line 11. Rather, applying an interpretive frame that
+debugging a statement like line 11. Rather, choosing to
+use conceptual knowledge from physics to understand a piece of code transforms debugging a position-update statement
+into a different activity: reasoning kinematically about the properties of motion
+trails. For a comparative perspective, consider Hutchins's argument that for aircraft pilots, ringing an aircraft speedometer with physical markers transforms the cognition involved in landing a plane \cite{hutchins_how_1995}:
+
+\begin{quote}
+  Without a speed bug, on final approach the PF [Pilot Flying] must remember the approach speed, read the airspeed indicator scale to find the remembered value of the approach speed on the airspeed indicator scale, and compare the position of the ASI [Airspeed Indicator] needle on the scale with the position of the approach speed on the scale. With the salmon bug set, the pilot no longer needs to read the airspeed indicator scale. He or she simply looks to see whether or not the indicator needle is lined up with the salmon bug. Thus, a memory and scale reading task is transformed into a judgment of spatial adjacency. \cite{hutchins_how_1995}
+\end{quote}
+
+Our physics debugging example and Hutchins's speed bug example \cite{hutchins_how_1995} share two core traits:
+
+\begin{enumerate}
+  \tightlist
+  \item Cognition gets \emph{distributed} \cite{hutchins_distributed_2000,hutchins_cognition_1995} across time and space.
+  \item That distribution doesn't simply enhance, but rather \emph{transforms} the nature of the activity, allowing cognitive agents to bring to bear resources that the prior or original context didn't afford.
+\end{enumerate}
+
+In Hutchins's
+
+the cognitive act of debugging in this instance. Applying an interpretive frame that
 treats an assignment statement as a kinematic position update lets us
 \emph{use conceptual knowledge from physics} to diagnose and fix
-problems in code. If we view the assignment statement as proposing
+problems in code.   There,  For comparison, consider
+
+ If we view the assignment statement as proposing
 something about the motion of an object---as, for example, when sense-making in science and engineering students can view equations as ``saying something'' about how a system behaves[blinded]---a
 field of knowledge and concomitant techniques from physics becomes
 available to me to think with. But, if we focus only on the
 semantic-level equivalence of statements 1 through 5, there would be no
 obvious reason for me to access what we know about physics in order to
 reason about the code.
+
+\subsection{Example 2: The Same Symbol Template Within The Same Language Can Still Mean Different Things}
 
 Our second example concerns statements that use the same symbol template for fundamentally different kinds of computation. In our JavaScript example statements, all code came from the same language. But, another phenomenon comes
 into play \emph{across} different languages when use the same symbology (written patterns) to stand for
@@ -544,11 +574,11 @@ reassignment statements to compose a statistical graphics plot.
 
 \begin{Shaded}
 \begin{Highlighting}[numbers=left,,]
-\NormalTok{p <-}\StringTok{ }\KeywordTok{InitializeGgplot_1w}\NormalTok{()}
-\NormalTok{p <-}\StringTok{ }\NormalTok{p +}\StringTok{ }\KeywordTok{GrandMeanLine}\NormalTok{(owp)}
-\NormalTok{p <-}\StringTok{ }\NormalTok{p +}\StringTok{ }\KeywordTok{GrandMeanPoint}\NormalTok{(owp)}
-\NormalTok{p <-}\StringTok{ }\NormalTok{p +}\StringTok{ }\KeywordTok{ScaleX_1w}\NormalTok{(owp)}
-\NormalTok{p <-}\StringTok{ }\NormalTok{p +}\StringTok{ }\KeywordTok{ScaleY_1w}\NormalTok{(owp)}
+\NormalTok{p =}\StringTok{ }\KeywordTok{InitializeGgplot_1w}\NormalTok{()}
+\NormalTok{p =}\StringTok{ }\NormalTok{p +}\StringTok{ }\KeywordTok{GrandMeanLine}\NormalTok{(owp)}
+\NormalTok{p =}\StringTok{ }\NormalTok{p +}\StringTok{ }\KeywordTok{GrandMeanPoint}\NormalTok{(owp)}
+\NormalTok{p =}\StringTok{ }\NormalTok{p +}\StringTok{ }\KeywordTok{ScaleX_1w}\NormalTok{(owp)}
+\NormalTok{p =}\StringTok{ }\NormalTok{p +}\StringTok{ }\KeywordTok{ScaleY_1w}\NormalTok{(owp)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -566,13 +596,11 @@ visual layers onto a plot, others (lines 4 and 5) modify features of the plot, l
 
 Given these motivating examples, it seems sensible to think there's
 utility in a programmer having different conceptual metaphors available
-to think about and work with code. Example 1 shows that choosing to
-apply knowledge from physics to a piece of code can change the cognitive
-nature of debugging. There, debugging a position-update statement
-becomes, in part, reasoning kinematically about the properties of motion
-trails.\footnote{For comparison, consider the argument that ringing an
-  aircraft speedometer with physical markers changes the nature of
-  cognition when pilots work to land a plane (Hutchins, 1995b).} Example
+to think about and work with code.
+
+We believe that working from conceptual metaphors---in our example, attacking a debugging problem by exploiting animation and drawing from physics knowledge---achieves the same kind of transformation Hutchins describes.
+
+Example
 2 shows that across languages, programmers might have to deploy
 different conceptual metaphors to reason about statements in a
 locally-consistent way. Knowing that plots in ggplot2 can be composed
