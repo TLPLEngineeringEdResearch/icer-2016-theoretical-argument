@@ -1,5 +1,10 @@
 \section{Abstract}\label{Abstract}
 
+This paper aims to expand our sense of what's possible in modeling cognition within computing education research. We argue that research
+approaches that privilege canonical knowledge do so at the
+expense of other productive knowledge and ways of knowing that students
+have. We explore applicable cognitive theory by showing how distributed cognition and symbolic forms can be a powerful framework for analysis in CSEd. Finally, we conclude with an exploration of epistemological concerns, arguing that a fundamental concern for our research community should be paying attention to what counts as \texttt{knowledge} and \texttt{knowing} in computing learning environments.
+
 \section{Introduction}\label{Introduction}
 
 Science and math education started challenging misconception models of mind in 1993 \cite{disessa_epistemology_1993,smith_misconceptions_1993}. By 1996, learning scientists were boldly repudiating the assumptions of misconceptions: ``Not all thoughts students express need to be understood as directly reflecting stable, stored knowledge structures. What the misconceptions perspective treats as a stored construct may alternatively be treated as an act of construction.'' \cite{hammer_misconceptions_1996}. In the more than 20 years since those papers were published, researchers---particularly in science education---have pushed cognitive models beyond the static assumptions of classical misconception accounts of knowledge. But, a preponderance of research in computing education (CSEd) has modeled and continues to model cognition through misconceptions. Such research assumes students have entrenched, wrong ideas about computation. And, while misconceptions research in computing education has advanced our understanding of teaching and learning, its narrow focus also begets problems that are growing too big to ignore:
@@ -7,13 +12,13 @@ Science and math education started challenging misconception models of mind in 1
 \begin{enumerate}
   \tightlist
   \item When we use misconceptions to treat student ideas as right or wrong, we establish and perpetuate a deficit model of student understanding.
-  \item The more classical misconceptions-basedresearch we publish as a community, the stronger that deficit narrative becomes in our discourse.
+  \item The more classical misconceptions-based research we publish as a community, the stronger that deficit narrative becomes in our discourse.
 \end{enumerate}
 
 This paper aims squarely at those problems by expanding a sense of what's possible in modeling cognition within computing education research. We argue research
 approaches that inflexibly privilege canonical knowledge do so at the
 expense of other productive knowledge and ways of knowing that students
-have. First, we reanalyze prior data to show how we might recast misconceptions as the potential seeds of productive knowledge. We then argue through example that expertise in programming can involve the fluid and active construction of conceptual metaphors to deal with idiosyncrasies within and across programming languages. These examples help broaden our sense of applicable cognitive theory by showing how distributed cognition and symbolic forms can be a powerful framework for analysis in CSEd. Finally, we conclude with an exploration of epistemological concerns, arguing that a fundamental concern for our research community should be paying attention to what counts as knowledge and knowing in computing learning environments.
+have. First, we reanalyze prior data to show how we might recast misconceptions as the potential seeds of productive knowledge. We then argue through example that expertise in programming can involve the fluid and active construction of conceptual metaphors to deal with idiosyncrasies within and across programming languages. These examples help broaden our sense of applicable cognitive theory by showing how distributed cognition and symbolic forms can be a powerful framework for analysis in CSEd. Finally, we conclude with an exploration of epistemological concerns, arguing that a fundamental concern for our research community should be paying attention to what counts as \texttt{knowledge} and \texttt{knowing} in computing learning environments.
 
 \subsection{Misconceptions research in computing education tends to
 ignore students' productive
@@ -129,11 +134,12 @@ In diagramming this information, a student in the study makes a mistake:
 The researchers are correct in the sense that \texttt{turkey} and
 \texttt{ham} and \texttt{roastBeef} will \emph{not} be sorted into the
 \texttt{meats} array. First, there is no code here that places
-\texttt{turkey} and \texttt{ham} in the array; there is only code that
+\texttt{turkey} and \texttt{ham} and \texttt{roastBeef} in the array; 
+there is only code that
 declares them as variables. Moreover, as written, an attempt to place
 \texttt{turkey} and \texttt{ham} and \texttt{roastBeef} into the array
 would fail. Because of type restrictions in Java, only objects of class
-Meat (or objects that inherit from class Meat) can go in the array.
+\texttt{Meat} (or objects that inherit from class \texttt{Meat}) can go in the array.
 \texttt{turkey} and \texttt{ham} and \texttt{roastBeef} are, perhaps
 confusingly, references to object instances of classes \texttt{Turkey}
 and \texttt{Ham} and \texttt{RoastBeef}, so in the current snippet they
@@ -149,7 +155,7 @@ Again, the researchers are right that the student is failing to describe
 the code in a way consistent with canon. But, in their non-canonical thinking Student3 evidences
 potentially ``\emph{productive}'' \cite{hammer_form_2002,hammer_tapping_2003} insights about design. Precisely \emph{because}
 there is no code stating that \texttt{turkey} and \texttt{roastBeef} and
-ham are sorted into the array, the student is \emph{inferring} that to
+\texttt{ham} are sorted into the array, the student is \emph{inferring} that to
 be true. And, while that behavior is not what's happening, it
 \emph{would} be sensible to design a program where specific instances of
 classes \texttt{Turkey} and \texttt{Ham} and \texttt{RoastBeef} could go
@@ -169,7 +175,7 @@ speculative conjecture. We can't know for certain whether Student3 could
 be tipped into a productive object-oriented design activity around the
 meats example because that question was not a focus of the research.
 
-My second example of research that criticizes students' non-canonical
+Our second example of research that criticizes students' non-canonical
 understandings comes from Bonar and Soloway's 1983 study of Pascal
 programmers \cite{bonar_uncovering_1983}, data from which is also analyzed and discussed in \cite{pea_languageindependent_1986}. A student in
 \cite{bonar_uncovering_1983} was asked to ``Write a program which reads in
@@ -241,7 +247,7 @@ reading the code. Those statements might not be the same \emph{to her}
 because she treats (1a) as having a function of controlling iteration
 while (2a)'s job is to combine two numbers into a new sum.
 
-These two purposes, which for the sake of description I'll call
+These two purposes, which for the sake of description we'll call
 \emph{keeping control} (1a) and \emph{totaling up} (2a) are, in a sense,
 different. The PASCAL compiler (and runtime) does not differentiate
 them, but humans can. And, humans may well \emph{want} to differentiate
@@ -299,8 +305,8 @@ Sherin's theory of symbolic forms \cite{sherin_how_2001}.
 An example drives home the connection between \cite{disessa_models_1986} and \cite{sherin_how_2001} as it applies to programming. The symbolic
 forms \emph{parts-of-a-whole} and \emph{base+change} have different
 conceptual schemata. Parts-of-a-whole refers to the contributions of
-component entities while base±change describes a kind of accumulation \cite{sherin_how_2001}.
-Specifically, the terms in base±change ``contribute to a whole but play different roles. One is a base value; the other is a change to that base.'' But, the two distinct conceptual schemata share what I
+component entities while \emph{base+change} describes a kind of accumulation \cite{sherin_how_2001}.
+Specifically, the terms in \emph{base+change} ``contribute to a whole but play different roles. One is a base value; the other is a change to that base.'' But, the two distinct conceptual schemata share what we
 would argue is the same symbolic structure: $\Box=︎ \Box + \Box$ (parts of a whole) and $\Box = \Box \pm \Delta$ (base + change) \cite{sherin_how_2001}.
 
 The problem, for learning to program, comes in needing to fluidly
@@ -320,9 +326,9 @@ because different languages design their operations around different
 symbolic and conceptual metaphors.
 
 To return to misconceptions, what seems to drive research on students'
-misconceptions is computing education largely a need to get students to program computers
+misconceptions in computing education is largely a need to get students to program computers
 and reason about computation in ways that are canonically correct. And,
-that's a worthwhile goals. But, as I've argued, we can
+that's a worthwhile goal. But, as we've argued, we can
 already identify cases where a narrow misconceptions focus is silent
 about (at best) or dismissive of (at worst) students' useful intuitions. We identified
 the further problems when a unilateral emphasis on one language's canon
@@ -335,7 +341,7 @@ students reasoning might get broken by attempts to ``fix'' such
 ``misconceptions''.
 
 It's important to note that misconceptions research in computing didn't
-always treat students' non-canonical knowledge as a problem. we begin the
+always treat students' non-canonical knowledge as a problem. We begin the
 next section by backtracing to some of the earliest work on students'
 cognitive ``bugs''. There, we find researchers talking more explicitly
 about what's useful in students' non-canonical knowledge---a stance
@@ -398,10 +404,10 @@ programming languages should be more expressive:
 Again, what's noteworthy is that rather than treating students'
 non-canonical views as a burden for instruction, Bonar and Soloway
 instead see them as an opportunity for programming language designers to
-make languages better.
+make languages better. Indeed, an empirical approach to language design has recently been articulated in Stefik and Siebert's work regarding language syntax's effect on novices. \cite{}
 
 That insight---that instruction and design can meet novices where they
-are---carries through to their final remarks about studying and
+are---carries through to Bonar and Soloway's final remarks about studying and
 analyzing novice programming knowledge:
 
 \begin{quote}
@@ -526,7 +532,7 @@ the cognitive act of debugging in this instance.    There,  For comparison, cons
 
  If we view the assignment statement as proposing
 something about the motion of an object---as, for example, when sense-making in science and engineering students can view equations as ``saying something'' about how a system behaves[blinded]---a
-field of knowledge and concomitant techniques from physics becomes
+field of knowledge and concomitant techniques from physics become
 available to me to think with. But, if we focus only on the
 semantic-level equivalence of statements 1 through 5, there would be no
 obvious reason for me to access what we know about physics in order to
@@ -535,7 +541,7 @@ reason about the code.
 \subsubsection{Example 2: The Plus Sign Means Lots of Things}
 
 Our second example concerns statements that use the same symbol template for fundamentally different kinds of computation. In our JavaScript example statements, all code came from the same language. But, another phenomenon comes
-into play \emph{across} different languages when use the same symbology (written patterns) to stand for
+into play \emph{across} different languages when they use the same symbology (written patterns) to stand for
 conceptually different operations. The statements below are examples of what look
 like semantically-equivalent operations, but in fact are not.
 
@@ -589,7 +595,7 @@ layered creation of a plot invites a very different kind of conceptual
 interpretation than, say, repeatedly accumulating numbers into a running
 sum. One obvious reason for thinking about this code with a different
 interpretive frame than incrementation is that numeric addition is commutative; composing a
-plot is not necessarily commutative. So, despite the syntactic similarity, reassignments that
+plot is not necessarily commutative. So, despite the syntactic similarity, statements that
 compose a plot using reassignment (as above) do not obey the same
 rules as reassignments for a running total. But, it turns out the statements above don't obey the same rules of string concatenation either. Within this code
 block, statements that look alike perform operations of a different
@@ -736,7 +742,7 @@ constructs to explain students' stances toward knowledge and knowing:
   that's going on here'' \cite{goffman_frame_1974}.
 \end{itemize}
 
-Resources can frames can interact in activity settings to produce
+Resources and frames can interact in activity settings to produce
 larger-scale patterns called ``epistemological coherences'' \cite{rosenberg_multiple_2006} where evidence from data suggests that a
 network of discrete cognitive units can nonetheless give rise to stable
 cognition.
